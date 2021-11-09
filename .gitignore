@@ -1,0 +1,10 @@
+
+*.iml
+*.xml
+*.bin
+*.json
+ckpts/pretrain-data/pretrain_distance.txt
+ckpts/pretrain-data/pretrain_duration.txt
+ckpts/ptntime-pretrained-model/.DS_Store
+ckpts/symtime-pretrained-model/.DS_Store
+ckpts/symtime-pretrained-model/start/.DS_Store
