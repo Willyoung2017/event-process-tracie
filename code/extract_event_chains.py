@@ -78,9 +78,9 @@ class SRLExtractor:
             else:
                 event1 = ' '.join(words[j:])
             event2 = ' '.join(words[i + 1:j])
-            if words[i].lower() == 'after':
+            if j - i > 1 and words[i].lower() == 'after':
                 res = [event2, event1]
-            elif words[i].lower() == 'before':
+            elif j - i > 1 and words[i].lower() == 'before':
                 res = [event1, event2]
             else:
                 res = [sentence]
