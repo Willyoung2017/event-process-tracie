@@ -14,16 +14,23 @@ class SRLExtractor:
     srl_model_url = "https://storage.googleapis.com/allennlp-public-models/" \
                     "structured-prediction-srl-bert.2020.12.15.tar.gz"
     stemmer_class = nltk.stem.snowball.SnowballStemmer
+    sp_path = 'data/chains/special_cases.txt'
 
     def __init__(self, use_cuda=True):
-        self.predictor = Predictor.from_path(self.srl_model_url,
-                                             cuda_device=0 if use_cuda else -1)
+        self.srl = Predictor.from_path(self.srl_model_url,
+                                       cuda_device=0 if use_cuda else -1)
         self.stemmer = self.stemmer_class('english')
+
+        make_dir(self.sp_path)
+        self.sp_fout = open(self.sp_path, 'w')
+
+    def free(self):
+        self.sp_fout.close()
 
     def select_verb(self, srl_dic):
         """select the most appropriate frame from the predicted frames"""
         words = srl_dic['words']
-        stem = ' '.join([self.stemmer.stem(w) for w in words])
+        stem = ' '.join([self.stemmer.stem(w.lower()) for w in words])
         frames = srl_dic['verbs']
         verbs = [d['verb'] for d in frames]
 
@@ -34,9 +41,56 @@ class SRLExtractor:
                         reverse=True)
             return frames[0]['verb']
 
+    def get_tmp_arg(self, tags):
+        res = []
+        for i, tag in enumerate(tags):
+            if tag == "B-ARGM-TMP":
+                cur_group = [i, -1]
+                for j in range(i + 1, len(tags) + 1):
+                    if j == len(tags) or tags[j] != "I-ARGM-TMP":
+                        cur_group[1] = j
+                        break
+                res.append(cur_group)
+        return res
+
+    def split_event(self, sentence):
+        sentence = sentence.strip()
+        sentence = sentence.strip('.\"\'')
+        srl_dic = self.srl.predict(sentence)
+        words = srl_dic['words']
+        frames = srl_dic['verbs']
+        tmp_arg_groups = [self.get_tmp_arg(d['tags']) for d in frames]
+        if all(len(groups) == 0 for groups in tmp_arg_groups):
+            res = [sentence]
+        else:
+            tmp_arg_lens = [max([0] + [j - i for i, j in tmp_arg]) for tmp_arg in tmp_arg_groups]
+            max_len = max(tmp_arg_lens)
+            frame_id = tmp_arg_lens.index(max_len)  # find the frame with the longest temporal argument
+            frame = frames[frame_id]
+            groups = tmp_arg_groups[frame_id]
+            i, j = groups[[j - i for i, j in groups].index(max_len)]
+            if i != 0 and j != len(words):
+                self.sp_fout.write('*** Warning ***\n')
+            tags = frame['tags']
+            assert len(tags) == len(words)
+            if i > len(words) - j:
+                event1 = ' '.join(words[:i])
+            else:
+                event1 = ' '.join(words[j:])
+            event2 = ' '.join(words[i + 1:j])
+            if words[i].lower() == 'after':
+                res = [event2, event1]
+            elif words[i].lower() == 'before':
+                res = [event1, event2]
+            else:
+                res = [sentence]
+        self.sp_fout.write(f'Input: {sentence}\n')
+        self.sp_fout.write(f'Output: {res}\n')
+        self.sp_fout.write(f'\n')
+        return res
+
     def parse_story_events(self, string):
         string = string.strip()
-        string = string.strip('.')
         n_temp = 0
         sentences = nltk.tokenize.sent_tokenize(string)
         events = []
@@ -44,12 +98,12 @@ class SRLExtractor:
             sent = sent.strip()
             if sent == '':
                 continue
-            if 'before' in sent or 'after' in sent:  # TODO
-                with open(TMP_PATH, 'a') as fout:
-                    fout.write(sent + '\n')
+            if 'before' in sent or 'after' in sent:
+                events += self.split_event(sent)
                 n_temp += 1
-            events.append(sent)
-        srl_results = self.predictor.predict_batch_json([{'sentence': e} for e in events])
+            else:
+                events.append(sent)
+        srl_results = self.srl.predict_batch_json([{'sentence': e} for e in events])
         res = []
         assert len(srl_results) == len(events)
         for srl, e in zip(srl_results, events):
@@ -57,7 +111,7 @@ class SRLExtractor:
                 print(f'Event [{e}] SRL failed')
                 continue
             verb = self.select_verb(srl)
-            res.append({'verb': verb, 'event': e})  # TODO
+            res.append({'verb': verb, 'event': e})
         return res
 
     def parse_query_events(self, string):
@@ -120,12 +174,15 @@ def main():
 
     extractor = SRLExtractor(use_cuda=args.cuda)
 
-    for f in os.listdir(args.input_dir):
-        if f.endswith('.txt'):
-            input_path = os.path.join(args.input_dir, f)
-            output_path = os.path.join(args.output_dir, f.replace('.txt', '.jsonl'))
-            make_dir(output_path)
-            extractor.process_file(input_path, output_path)
+    try:
+        for f in os.listdir(args.input_dir):
+            if f.endswith('.txt'):
+                input_path = os.path.join(args.input_dir, f)
+                output_path = os.path.join(args.output_dir, f.replace('.txt', '.jsonl'))
+                make_dir(output_path)
+                extractor.process_file(input_path, output_path)
+    finally:
+        extractor.free()
 
 
 if __name__ == '__main__':
