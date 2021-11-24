@@ -1,6 +1,7 @@
 from allennlp.predictors.predictor import Predictor
 import allennlp_models.tagging
 import nltk
+from nltk.stem.snowball import SnowballStemmer
 import json
 import os
 import argparse
@@ -12,10 +13,26 @@ TMP_PATH = 'data/chains/tmp.txt'
 class SRLExtractor:
     srl_model_url = "https://storage.googleapis.com/allennlp-public-models/" \
                     "structured-prediction-srl-bert.2020.12.15.tar.gz"
+    stemmer_class = nltk.stem.snowball.SnowballStemmer
 
     def __init__(self, use_cuda=True):
         self.predictor = Predictor.from_path(self.srl_model_url,
                                              cuda_device=0 if use_cuda else -1)
+        self.stemmer = self.stemmer_class('english')
+
+    def select_verb(self, srl_dic):
+        """select the most appropriate frame from the predicted frames"""
+        words = srl_dic['words']
+        stem = ' '.join([self.stemmer.stem(w) for w in words])
+        frames = srl_dic['verbs']
+        verbs = [d['verb'] for d in frames]
+
+        if any(f'{x} going to' in stem for x in ['was', 'were', 'is', 'are']):
+            return frames[0]['verb']
+        else:
+            frames.sort(key=lambda d: sum(1 for tag in d['tags'] if tag != 'O'),
+                        reverse=True)
+            return frames[0]['verb']
 
     def parse_story_events(self, string):
         string = string.strip()
@@ -39,7 +56,8 @@ class SRLExtractor:
             if len(srl['verbs']) == 0:
                 print(f'Event [{e}] SRL failed')
                 continue
-            res.append({'verb': srl['verbs'][0]['verb'], 'event': e})  # TODO
+            verb = self.select_verb(srl)
+            res.append({'verb': verb, 'event': e})  # TODO
         return res
 
     def parse_query_events(self, string):
