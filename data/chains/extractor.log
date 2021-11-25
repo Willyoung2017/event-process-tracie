@@ -1,0 +1,2142 @@
+[SPLIT_TMP_AFTER]
+Input: Chad found the cap after he got off of the ride
+Output: ['he got off of the ride', 'Chad found the cap']
+
+[SPLIT_TMP_AFTER]
+Input: Chad found the cap after he got off of the ride
+Output: ['he got off of the ride', 'Chad found the cap']
+
+[COREF]
+event: Michael called him
+chain: ['Michael bought a computer', 'He turned it on', 'He could not figure out how to use it', '***He called his friend Jeb', 'Jeb showed him how to use it and he had fun!']
+
+[COREF]
+event: Michael called him
+chain: ['Michael bought a computer', 'He turned it on', 'He could not figure out how to use it', '***He called his friend Jeb', 'Jeb showed him how to use it and he had fun!']
+
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+[SRL]
+sentence: Joe and Fred like to scuba dive in Puget Sound
+SRL: {'verbs': [], 'words': ['Joe', 'and', 'Fred', 'like', 'to', 'scuba', 'dive', 'in', 'Puget', 'Sound']}
+
+[SRL]
+sentence: Joe and Fred like to scuba dive in Puget Sound
+SRL: {'verbs': [], 'words': ['Joe', 'and', 'Fred', 'like', 'to', 'scuba', 'dive', 'in', 'Puget', 'Sound']}
+
+[SRL]
+sentence: Passerby 's alert the police
+SRL: {'verbs': [], 'words': ['Passerby', "'s", 'alert', 'the', 'police']}
+
+[SRL]
+sentence: Passerby 's alert the police
+SRL: {'verbs': [], 'words': ['Passerby', "'s", 'alert', 'the', 'police']}
+
+[SRL]
+sentence: His brother strap fireworks to the back of his bicycle
+SRL: {'verbs': [], 'words': ['His', 'brother', 'strap', 'fireworks', 'to', 'the', 'back', 'of', 'his', 'bicycle']}
+
+[SRL]
+sentence: His brother strap fireworks to the back of his bicycle
+SRL: {'verbs': [], 'words': ['His', 'brother', 'strap', 'fireworks', 'to', 'the', 'back', 'of', 'his', 'bicycle']}
+
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+[COREF]
+event: seeing the trampoline
+chain: ['***Jake bought his family a new trampoline', 'They were scared to bounce on it', 'Jake climbed on to it and jumped up and down', 'When they saw it was safe, his family joined him', "Now Jake can't get them to stop, they're having so much fun"]
+
+[COREF]
+event: seeing the trampoline
+chain: ['***Jake bought his family a new trampoline', 'They were scared to bounce on it', 'Jake climbed on to it and jumped up and down', 'When they saw it was safe, his family joined him', "Now Jake can't get them to stop, they're having so much fun"]
+
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: Carol park in the town center
+SRL: {'verbs': [], 'words': ['Carol', 'park', 'in', 'the', 'town', 'center']}
+
+[SRL]
+sentence: Carol park in the town center
+SRL: {'verbs': [], 'words': ['Carol', 'park', 'in', 'the', 'town', 'center']}
+
+[SPLIT_TMP_AFTER]
+Input: Nancy quit smoking after her friend died
+Output: ['her friend died', 'Nancy quit smoking']
+
+[SPLIT_TMP_AFTER]
+Input: Nancy quit smoking after her friend died
+Output: ['her friend died', 'Nancy quit smoking']
+
+[SRL]
+sentence: Joe and Fred like to scuba dive in Puget Sound
+SRL: {'verbs': [], 'words': ['Joe', 'and', 'Fred', 'like', 'to', 'scuba', 'dive', 'in', 'Puget', 'Sound']}
+
+[SRL]
+sentence: Joe and Fred like to scuba dive in Puget Sound
+SRL: {'verbs': [], 'words': ['Joe', 'and', 'Fred', 'like', 'to', 'scuba', 'dive', 'in', 'Puget', 'Sound']}
+
+[SRL]
+sentence: Carol park in the town center
+SRL: {'verbs': [], 'words': ['Carol', 'park', 'in', 'the', 'town', 'center']}
+
+[SRL]
+sentence: Carol park in the town center
+SRL: {'verbs': [], 'words': ['Carol', 'park', 'in', 'the', 'town', 'center']}
+
+[COREF]
+event: the braces are removed
+chain: ['Tom needed to get braces', 'He was afraid of them', 'The dentist assured him everything would be fine', 'Tom had them on for a while', '***Once removed he felt it was worth it']
+
+[COREF]
+event: the braces are removed
+chain: ['Tom needed to get braces', 'He was afraid of them', 'The dentist assured him everything would be fine', 'Tom had them on for a while', '***Once removed he felt it was worth it']
+
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+[COREF]
+event: he ordered the burger
+chain: ['Mike was at a burger restaurant', '***And he ordered a cheeseburger and a milkshake', 'But he noticed that there was hair in his burger', 'So he told the waiter about it', "Mike wasn't given a new burger and he left"]
+
+[COREF]
+event: he ordered the burger
+chain: ['Mike was at a burger restaurant', '***And he ordered a cheeseburger and a milkshake', 'But he noticed that there was hair in his burger', 'So he told the waiter about it', "Mike wasn't given a new burger and he left"]
+
+[SPLIT_TMP_AFTER]
+Input: Chad found the cap after he got off of the ride
+Output: ['he got off of the ride', 'Chad found the cap']
+
+[SPLIT_TMP_AFTER]
+Input: Chad found the cap after he got off of the ride
+Output: ['he got off of the ride', 'Chad found the cap']
+
+[SRL]
+sentence: Anna visit America
+SRL: {'verbs': [], 'words': ['Anna', 'visit', 'America']}
+
+[SRL]
+sentence: Anna visit America
+SRL: {'verbs': [], 'words': ['Anna', 'visit', 'America']}
+
+[SPLIT_TMP_AFTER]
+Input: Chad found the cap after he got off of the ride
+Output: ['he got off of the ride', 'Chad found the cap']
+
+[SPLIT_TMP_AFTER]
+Input: Chad found the cap after he got off of the ride
+Output: ['he got off of the ride', 'Chad found the cap']
+
+[SRL]
+sentence: Passerby 's alert the police
+SRL: {'verbs': [], 'words': ['Passerby', "'s", 'alert', 'the', 'police']}
+
+[SRL]
+sentence: Passerby 's alert the police
+SRL: {'verbs': [], 'words': ['Passerby', "'s", 'alert', 'the', 'police']}
+
+[COREF]
+event: Maggie checks her phone
+chain: ['Maggie had plans to see a concert', 'She arrived at the theater on time', 'For some reason, there was nobody there', '***She opened her phone to check for any notices', 'Then, she discovered that the concert had been cancelled']
+
+[COREF]
+event: Maggie checks her phone
+chain: ['Maggie had plans to see a concert', 'She arrived at the theater on time', 'For some reason, there was nobody there', '***She opened her phone to check for any notices', 'Then, she discovered that the concert had been cancelled']
+
+[SPLIT_TMP_AFTER]
+Input: Nancy quit smoking after her friend died
+Output: ['her friend died', 'Nancy quit smoking']
+
+[SPLIT_TMP_AFTER]
+Input: Nancy quit smoking after her friend died
+Output: ['her friend died', 'Nancy quit smoking']
+
+[SPLIT_TMP_AFTER]
+Input: Chad found the cap after he got off of the ride
+Output: ['he got off of the ride', 'Chad found the cap']
+
+[SPLIT_TMP_AFTER]
+Input: Chad found the cap after he got off of the ride
+Output: ['he got off of the ride', 'Chad found the cap']
+
+[SRL]
+sentence: Amy's ex lives in Atlanta
+SRL: {'verbs': [], 'words': ['Amy', "'s", 'ex', 'lives', 'in', 'Atlanta']}
+
+[SRL]
+sentence: Amy's ex lives in Atlanta
+SRL: {'verbs': [], 'words': ['Amy', "'s", 'ex', 'lives', 'in', 'Atlanta']}
+
+[SRL]
+sentence: the ad for a family shelter
+SRL: {'verbs': [], 'words': ['the', 'ad', 'for', 'a', 'family', 'shelter']}
+
+[SRL]
+sentence: the ad for a family shelter
+SRL: {'verbs': [], 'words': ['the', 'ad', 'for', 'a', 'family', 'shelter']}
+
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+[SRL]
+sentence: Her best friend smoke as well
+SRL: {'verbs': [], 'words': ['Her', 'best', 'friend', 'smoke', 'as', 'well']}
+
+[SPLIT_TMP_AFTER]
+Input: Nancy quit smoking after her friend died
+Output: ['her friend died', 'Nancy quit smoking']
+
+[SRL]
+sentence: Her best friend smoke as well
+SRL: {'verbs': [], 'words': ['Her', 'best', 'friend', 'smoke', 'as', 'well']}
+
+[SPLIT_TMP_AFTER]
+Input: Nancy quit smoking after her friend died
+Output: ['her friend died', 'Nancy quit smoking']
+
+[SPLIT_TMP_AFTER]
+Input: Chad found the cap after he got off of the ride
+Output: ['he got off of the ride', 'Chad found the cap']
+
+[SPLIT_TMP_AFTER]
+Input: Chad found the cap after he got off of the ride
+Output: ['he got off of the ride', 'Chad found the cap']
+
+*** Warning ***
+*** Warning ***
+[COREF]
+event: the ball was thrown
+chain: ['***I was throwing the baseball with my son', 'He threw one past me that landed in the lake', 'I reached in to get the ball', 'I lost my balance and fell in', 'I got the ball and a bath all in one shot!']
+
+[COREF]
+event: the ball was thrown
+chain: ['***I was throwing the baseball with my son', 'He threw one past me that landed in the lake', 'I reached in to get the ball', 'I lost my balance and fell in', 'I got the ball and a bath all in one shot!']
+
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+[SRL]
+sentence: The two drift apart
+SRL: {'verbs': [], 'words': ['The', 'two', 'drift', 'apart']}
+
+[SRL]
+sentence: The two drift apart
+SRL: {'verbs': [], 'words': ['The', 'two', 'drift', 'apart']}
+
+[SRL]
+sentence: Fred love tacos
+SRL: {'verbs': [], 'words': ['Fred', 'love', 'tacos']}
+
+[SRL]
+sentence: Fred love tacos
+SRL: {'verbs': [], 'words': ['Fred', 'love', 'tacos']}
+
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_AFTER]
+Input: Nancy quit smoking after her friend died
+Output: ['her friend died', 'Nancy quit smoking']
+
+[SPLIT_TMP_AFTER]
+Input: Nancy quit smoking after her friend died
+Output: ['her friend died', 'Nancy quit smoking']
+
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_AFTER]
+Input: Chad found the cap after he got off of the ride
+Output: ['he got off of the ride', 'Chad found the cap']
+
+[SPLIT_TMP_AFTER]
+Input: Chad found the cap after he got off of the ride
+Output: ['he got off of the ride', 'Chad found the cap']
+
+[SRL]
+sentence: The two drift apart
+SRL: {'verbs': [], 'words': ['The', 'two', 'drift', 'apart']}
+
+[SRL]
+sentence: The two drift apart
+SRL: {'verbs': [], 'words': ['The', 'two', 'drift', 'apart']}
+
+[SRL]
+sentence: Amy's ex lives in Atlanta
+SRL: {'verbs': [], 'words': ['Amy', "'s", 'ex', 'lives', 'in', 'Atlanta']}
+
+[SRL]
+sentence: Amy's ex lives in Atlanta
+SRL: {'verbs': [], 'words': ['Amy', "'s", 'ex', 'lives', 'in', 'Atlanta']}
+
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_AFTER]
+Input: Chad found the cap after he got off of the ride
+Output: ['he got off of the ride', 'Chad found the cap']
+
+[SPLIT_TMP_AFTER]
+Input: Chad found the cap after he got off of the ride
+Output: ['he got off of the ride', 'Chad found the cap']
+
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: Joe and Fred like to scuba dive in Puget Sound
+SRL: {'verbs': [], 'words': ['Joe', 'and', 'Fred', 'like', 'to', 'scuba', 'dive', 'in', 'Puget', 'Sound']}
+
+[SRL]
+sentence: Joe and Fred like to scuba dive in Puget Sound
+SRL: {'verbs': [], 'words': ['Joe', 'and', 'Fred', 'like', 'to', 'scuba', 'dive', 'in', 'Puget', 'Sound']}
+
+[SRL]
+sentence: the exam
+SRL: {'verbs': [], 'words': ['the', 'exam']}
+
+[SRL]
+sentence: the exam
+SRL: {'verbs': [], 'words': ['the', 'exam']}
+
+[SRL]
+sentence: Joe and Fred like to scuba dive in Puget Sound
+SRL: {'verbs': [], 'words': ['Joe', 'and', 'Fred', 'like', 'to', 'scuba', 'dive', 'in', 'Puget', 'Sound']}
+
+[SRL]
+sentence: Joe and Fred like to scuba dive in Puget Sound
+SRL: {'verbs': [], 'words': ['Joe', 'and', 'Fred', 'like', 'to', 'scuba', 'dive', 'in', 'Puget', 'Sound']}
+
+[COREF]
+event: he pulled out the rotten tooth
+chain: ["Tim's tooth was hurting like crazy", 'He could barely eat or drink', 'His dentist took a look around in his mouth', 'One of his teeth was rotten', '***Once the tooth was pulled, Tim felt fine']
+
+[COREF]
+event: he pulled out the rotten tooth
+chain: ["Tim's tooth was hurting like crazy", 'He could barely eat or drink', 'His dentist took a look around in his mouth', 'One of his teeth was rotten', '***Once the tooth was pulled, Tim felt fine']
+
+*** Warning ***
+*** Warning ***
+[COREF]
+event: he left the burger restaurant
+chain: ['Mike was at a burger restaurant', 'And he ordered a cheeseburger and a milkshake', 'But he noticed that there was hair in his burger', 'So he told the waiter about it', "***Mike wasn't given a new burger and he left"]
+
+[COREF]
+event: he left the burger restaurant
+chain: ['Mike was at a burger restaurant', 'And he ordered a cheeseburger and a milkshake', 'But he noticed that there was hair in his burger', 'So he told the waiter about it', "***Mike wasn't given a new burger and he left"]
+
+[SPLIT_TMP_AFTER]
+Input: Chad found the cap after he got off of the ride
+Output: ['he got off of the ride', 'Chad found the cap']
+
+[SPLIT_TMP_AFTER]
+Input: Chad found the cap after he got off of the ride
+Output: ['he got off of the ride', 'Chad found the cap']
+
+[SRL]
+sentence: Passerby 's alert the police
+SRL: {'verbs': [], 'words': ['Passerby', "'s", 'alert', 'the', 'police']}
+
+[SRL]
+sentence: Passerby 's alert the police
+SRL: {'verbs': [], 'words': ['Passerby', "'s", 'alert', 'the', 'police']}
+
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: Eric love honey buns
+SRL: {'verbs': [], 'words': ['Eric', 'love', 'honey', 'buns']}
+
+[SRL]
+sentence: Eric love honey buns
+SRL: {'verbs': [], 'words': ['Eric', 'love', 'honey', 'buns']}
+
+[COREF]
+event: he lost his balance
+chain: ['I was throwing the baseball with my son', 'He threw one past me that landed in the lake', 'I reached in to get the ball', '***I lost my balance and fell in', 'I got the ball and a bath all in one shot!']
+
+[COREF]
+event: he lost his balance
+chain: ['I was throwing the baseball with my son', 'He threw one past me that landed in the lake', 'I reached in to get the ball', '***I lost my balance and fell in', 'I got the ball and a bath all in one shot!']
+
+[SPLIT_TMP_AFTER]
+Input: Chad found the cap after he got off of the ride
+Output: ['he got off of the ride', 'Chad found the cap']
+
+[SPLIT_TMP_AFTER]
+Input: Chad found the cap after he got off of the ride
+Output: ['he got off of the ride', 'Chad found the cap']
+
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: Joe and Fred like to scuba dive in Puget Sound
+SRL: {'verbs': [], 'words': ['Joe', 'and', 'Fred', 'like', 'to', 'scuba', 'dive', 'in', 'Puget', 'Sound']}
+
+[SRL]
+sentence: Joe and Fred like to scuba dive in Puget Sound
+SRL: {'verbs': [], 'words': ['Joe', 'and', 'Fred', 'like', 'to', 'scuba', 'dive', 'in', 'Puget', 'Sound']}
+
+[COREF]
+event: getting an offer
+chain: ['Joe was an contracting handyman', 'He worked a different job everyday', 'His pay was always uncertain', 'Joe was offered a salaried position on his job', '***He gladly accepted the offer']
+
+[COREF]
+event: getting an offer
+chain: ['Joe was an contracting handyman', 'He worked a different job everyday', 'His pay was always uncertain', 'Joe was offered a salaried position on his job', '***He gladly accepted the offer']
+
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: Eric love honey buns
+SRL: {'verbs': [], 'words': ['Eric', 'love', 'honey', 'buns']}
+
+[SRL]
+sentence: Eric love honey buns
+SRL: {'verbs': [], 'words': ['Eric', 'love', 'honey', 'buns']}
+
+[COREF]
+event: Jeremy was given detention
+chain: ['Jeremy brought his boombox to school', 'Everyone was very confused', 'He started playing it very loud', 'Teachers got angry and got security', '***They gave him suspension']
+
+[COREF]
+event: Jeremy was given detention
+chain: ['Jeremy brought his boombox to school', 'Everyone was very confused', 'He started playing it very loud', 'Teachers got angry and got security', '***They gave him suspension']
+
+[SPLIT_TMP_AFTER]
+Input: Nancy quit smoking after her friend died
+Output: ['her friend died', 'Nancy quit smoking']
+
+[SPLIT_TMP_AFTER]
+Input: Nancy quit smoking after her friend died
+Output: ['her friend died', 'Nancy quit smoking']
+
+[COREF]
+event: that year came to an end
+chain: ['The twins dressed the same', 'They went to school', "The teacher couldn't tell them apart", 'She gave one of the twins a hat', '***One of the twins wore the hat for that year']
+
+[COREF]
+event: that year came to an end
+chain: ['The twins dressed the same', 'They went to school', "The teacher couldn't tell them apart", 'She gave one of the twins a hat', '***One of the twins wore the hat for that year']
+
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+[SPLIT_TMP_AFTER]
+Input: He decided to take a nap after putting the batteries in
+Output: ['putting the batteries in', 'He decided to take a nap']
+
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: the music festival
+SRL: {'verbs': [], 'words': ['the', 'music', 'festival']}
+
+[SRL]
+sentence: the music festival
+SRL: {'verbs': [], 'words': ['the', 'music', 'festival']}
+
+[SPLIT_TMP_BEFORE]
+Input: She smiled and joked with him before opening the door
+Output: ['She smiled and joked with him', 'opening the door']
+
+[SPLIT_TMP_BEFORE]
+Input: She smiled and joked with him before opening the door
+Output: ['She smiled and joked with him', 'opening the door']
+
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: The coral snake bit Juan on his ankle
+SRL: {'verbs': [], 'words': ['The', 'coral', 'snake', 'bit', 'Juan', 'on', 'his', 'ankle']}
+
+[SRL]
+sentence: The coral snake bit Juan on his ankle
+SRL: {'verbs': [], 'words': ['The', 'coral', 'snake', 'bit', 'Juan', 'on', 'his', 'ankle']}
+
+[COREF]
+event: seeing a new employee and buying a tour
+chain: ['I like going to a brewery a few blocks from my house', 'It has a very convenient location for me', "It offers free pint glasses on each patron's first tour", 'I have a cabinet full of those pint glasses', '***I simply buy the tour any time I see a new employee']
+
+[COREF]
+event: seeing a new employee and buying a tour
+chain: ['I like going to a brewery a few blocks from my house', 'It has a very convenient location for me', "It offers free pint glasses on each patron's first tour", 'I have a cabinet full of those pint glasses', '***I simply buy the tour any time I see a new employee']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[COREF]
+event: she cleaned the window
+chain: ['Sue got in her car and frowned at how filthy the window was', "Her dog's nose had made quite a mess of the glass", 'She wondered if he had worked hard to create that window art for her', '***Sue sort of felt bad as she cleaned it away', 'The next day, her dog created a new masterpiece on the window']
+
+[COREF]
+event: she cleaned the window
+chain: ['Sue got in her car and frowned at how filthy the window was', "Her dog's nose had made quite a mess of the glass", 'She wondered if he had worked hard to create that window art for her', '***Sue sort of felt bad as she cleaned it away', 'The next day, her dog created a new masterpiece on the window']
+
+[COREF]
+event: she had arrived at the office
+chain: ['Beth needed to get to her office', 'She waved a taxi down and told the driver where to go', '***The driver took her to her office', "The driver told her that she didn't have to pay", "She decided to pay for the next person's ride instead"]
+
+[COREF]
+event: she had arrived at the office
+chain: ['Beth needed to get to her office', 'She waved a taxi down and told the driver where to go', '***The driver took her to her office', "The driver told her that she didn't have to pay", "She decided to pay for the next person's ride instead"]
+
+[SRL]
+sentence: Much change for both schools
+SRL: {'verbs': [], 'words': ['Much', 'change', 'for', 'both', 'schools']}
+
+[SRL]
+sentence: Much change for both schools
+SRL: {'verbs': [], 'words': ['Much', 'change', 'for', 'both', 'schools']}
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[COREF]
+event: Lagethera refused to clean her room and left
+chain: ["Lagertha didn't like being told what to do", '***Her mother told her to clean her room', 'Lagertha refused, and went outside to play with her friends', 'When she returned at dusk, there was candy and roast lamb to eat', 'Her mother forbid her to have any though, and sent her to her room']
+
+[COREF]
+event: Lagethera refused to clean her room and left
+chain: ["Lagertha didn't like being told what to do", '***Her mother told her to clean her room', 'Lagertha refused, and went outside to play with her friends', 'When she returned at dusk, there was candy and roast lamb to eat', 'Her mother forbid her to have any though, and sent her to her room']
+
+[SRL]
+sentence: The dog's owner through a frisbee in Tom's direction
+SRL: {'verbs': [], 'words': ['The', 'dog', "'s", 'owner', 'through', 'a', 'frisbee', 'in', 'Tom', "'s", 'direction']}
+
+[SRL]
+sentence: The dog's owner through a frisbee in Tom's direction
+SRL: {'verbs': [], 'words': ['The', 'dog', "'s", 'owner', 'through', 'a', 'frisbee', 'in', 'Tom', "'s", 'direction']}
+
+[COREF]
+event: she was doing laundry
+chain: ['Cammie lost a $50 bill somewhere', 'She was so upset, she almost cried', '***Then, the next day, doing laundry, she found it!', 'It was wet, wrinkled, and clean in the washer!', 'Cammie was elated!']
+
+[COREF]
+event: she was doing laundry
+chain: ['Cammie lost a $50 bill somewhere', 'She was so upset, she almost cried', '***Then, the next day, doing laundry, she found it!', 'It was wet, wrinkled, and clean in the washer!', 'Cammie was elated!']
+
+[SRL]
+sentence: Carter sleep in his crib
+SRL: {'verbs': [], 'words': ['Carter', 'sleep', 'in', 'his', 'crib']}
+
+[SRL]
+sentence: Carter sleep in his crib
+SRL: {'verbs': [], 'words': ['Carter', 'sleep', 'in', 'his', 'crib']}
+
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: The dog's owner through a frisbee in Tom's direction
+SRL: {'verbs': [], 'words': ['The', 'dog', "'s", 'owner', 'through', 'a', 'frisbee', 'in', 'Tom', "'s", 'direction']}
+
+[SRL]
+sentence: The dog's owner through a frisbee in Tom's direction
+SRL: {'verbs': [], 'words': ['The', 'dog', "'s", 'owner', 'through', 'a', 'frisbee', 'in', 'Tom', "'s", 'direction']}
+
+[SPLIT_TMP_AFTER]
+Input: Alas, I could not find a job after six months of searching
+Output: ['six months of searching', 'Alas , I could not find a job']
+
+[SPLIT_TMP_AFTER]
+Input: Alas, I could not find a job after six months of searching
+Output: ['six months of searching', 'Alas , I could not find a job']
+
+[SRL]
+sentence: the scouts cheer
+SRL: {'verbs': [], 'words': ['the', 'scouts', 'cheer']}
+
+[SRL]
+sentence: the scouts cheer
+SRL: {'verbs': [], 'words': ['the', 'scouts', 'cheer']}
+
+[COREF]
+event: the waiter was berated by Mikey's mother
+chain: ['Mikey was eating out with his family', 'His mom complained that her meat was undercooked', '***Mikey tried to stop her, but she began berating the waiter', 'Other people noticed and scolded her', 'It became such a mess Mikey decided to leave']
+
+[COREF]
+event: the waiter was berated by Mikey's mother
+chain: ['Mikey was eating out with his family', 'His mom complained that her meat was undercooked', '***Mikey tried to stop her, but she began berating the waiter', 'Other people noticed and scolded her', 'It became such a mess Mikey decided to leave']
+
+*** Warning ***
+*** Warning ***
+[COREF]
+event: Amy was unable to get a job
+chain: ['Amy has suffered from anxiety her whole life', '***This had prevented her from getting a job', "She has a degree but hasn't used it", 'Today she has a stay at home job', 'Today, Amy is happy']
+
+[COREF]
+event: Amy was unable to get a job
+chain: ['Amy has suffered from anxiety her whole life', '***This had prevented her from getting a job', "She has a degree but hasn't used it", 'Today she has a stay at home job', 'Today, Amy is happy']
+
+[COREF]
+event: he found info online
+chain: ['Tim wanted a new computer', 'He heard it would be cheaper to build his own', 'He was afraid to try it out', '***Eventually Tim found plenty of up to date information online', 'He built one and it was surprisingly easy']
+
+[COREF]
+event: he found info online
+chain: ['Tim wanted a new computer', 'He heard it would be cheaper to build his own', 'He was afraid to try it out', '***Eventually Tim found plenty of up to date information online', 'He built one and it was surprisingly easy']
+
+[SPLIT_TMP_AFTER]
+Input: Randy needed a drink after work
+Output: ['work', 'Randy needed a drink']
+
+[SPLIT_TMP_AFTER]
+Input: Randy needed a drink after work
+Output: ['work', 'Randy needed a drink']
+
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+*** Warning ***
+*** Warning ***
+[COREF]
+event: Jack failed the test
+chain: ['Jack has a test in science', 'He has been studying all week', 'He still does not feel ready', '***Jack got to his test and failed', 'He begged his teacher for a retake and she said no']
+
+[COREF]
+event: Jack failed the test
+chain: ['Jack has a test in science', 'He has been studying all week', 'He still does not feel ready', '***Jack got to his test and failed', 'He begged his teacher for a retake and she said no']
+
+[COREF]
+event: he started playing the game
+chain: ['***Alan loved to play Candy crush', 'Every time he had a new set of lives he would play', 'He would play until he lost and then consider spending money', 'He lost track of how much money he may have blown on it', 'But it was what he liked to do for fun, so he was going to continue']
+
+[COREF]
+event: he started playing the game
+chain: ['***Alan loved to play Candy crush', 'Every time he had a new set of lives he would play', 'He would play until he lost and then consider spending money', 'He lost track of how much money he may have blown on it', 'But it was what he liked to do for fun, so he was going to continue']
+
+[SRL]
+sentence: The coral snake bit Juan on his ankle
+SRL: {'verbs': [], 'words': ['The', 'coral', 'snake', 'bit', 'Juan', 'on', 'his', 'ankle']}
+
+[COREF]
+event: The coral snake bite Juan on his ankle
+chain: ['Juan worked for a local landscaping company', 'One day he was trimming hedges in a flower bed', 'He did not see the coral snake in the flower bed', '***Juan could not work for several days because of the snake bite']
+
+[SRL]
+sentence: The coral snake bit Juan on his ankle
+SRL: {'verbs': [], 'words': ['The', 'coral', 'snake', 'bit', 'Juan', 'on', 'his', 'ankle']}
+
+[COREF]
+event: The coral snake bite Juan on his ankle
+chain: ['Juan worked for a local landscaping company', 'One day he was trimming hedges in a flower bed', 'He did not see the coral snake in the flower bed', '***Juan could not work for several days because of the snake bite']
+
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+[COREF]
+event: practice starts
+chain: ['Jim was a football player', '***One day at practice he got hit really hard', 'He stood up and then fell back down', 'The team medic was sent over immediately', 'Jim was diagnosed with a concussion']
+
+[COREF]
+event: practice starts
+chain: ['Jim was a football player', '***One day at practice he got hit really hard', 'He stood up and then fell back down', 'The team medic was sent over immediately', 'Jim was diagnosed with a concussion']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[COREF]
+event: Cammie was doing laundry
+chain: ['Cammie lost a $50 bill somewhere', 'She was so upset, she almost cried', 'Then, the next day, doing laundry, she found it!', 'It was wet, wrinkled, and clean in the washer!', '***Cammie was elated!']
+
+[COREF]
+event: Cammie was doing laundry
+chain: ['Cammie lost a $50 bill somewhere', 'She was so upset, she almost cried', 'Then, the next day, doing laundry, she found it!', 'It was wet, wrinkled, and clean in the washer!', '***Cammie was elated!']
+
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+[COREF]
+event: he lost some lives
+chain: ['Alan loved to play Candy crush', 'Every time he had a new set of lives he would play', '***He would play until he lost and then consider spending money', 'He lost track of how much money he may have blown on it', 'But it was what he liked to do for fun, so he was going to continue']
+
+[COREF]
+event: he lost some lives
+chain: ['Alan loved to play Candy crush', 'Every time he had a new set of lives he would play', '***He would play until he lost and then consider spending money', 'He lost track of how much money he may have blown on it', 'But it was what he liked to do for fun, so he was going to continue']
+
+[SPLIT_TMP_AFTER]
+Input: My cat immediately jumps on the blanket after it is folded
+Output: ['it is folded', 'My cat immediately jumps on the blanket']
+
+[SPLIT_TMP_AFTER]
+Input: My cat immediately jumps on the blanket after it is folded
+Output: ['it is folded', 'My cat immediately jumps on the blanket']
+
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: her boyfriend call
+SRL: {'verbs': [], 'words': ['her', 'boyfriend', 'call']}
+
+[SRL]
+sentence: her boyfriend call
+SRL: {'verbs': [], 'words': ['her', 'boyfriend', 'call']}
+
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_BEFORE]
+Input: She smiled and joked with him before opening the door
+Output: ['She smiled and joked with him', 'opening the door']
+
+[SPLIT_TMP_BEFORE]
+Input: She smiled and joked with him before opening the door
+Output: ['She smiled and joked with him', 'opening the door']
+
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+[COREF]
+event: Evan was afraid of people discovering his secret
+chain: ['Evan was nine but sometimes still wet the bed', 'He was invited to a sleepover but afraid to attend', '***He did not want anyone to discover his secret!', 'Then his mom bought him a pack of absorbent underwear to wear', 'Evan felt much more secure with the backup underwear on!']
+
+[COREF]
+event: Evan was afraid of people discovering his secret
+chain: ['Evan was nine but sometimes still wet the bed', 'He was invited to a sleepover but afraid to attend', '***He did not want anyone to discover his secret!', 'Then his mom bought him a pack of absorbent underwear to wear', 'Evan felt much more secure with the backup underwear on!']
+
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_BEFORE]
+Input: She smiled and joked with him before opening the door
+Output: ['She smiled and joked with him', 'opening the door']
+
+[SPLIT_TMP_BEFORE]
+Input: She smiled and joked with him before opening the door
+Output: ['She smiled and joked with him', 'opening the door']
+
+[COREF]
+event: Tim saw they had dial up
+chain: ['Tim was visiting his grandparents', "They didn't have wifi or fast internet", 'Their connection was still using dial up', '***Tim tried to use the internet but it was just too slow', 'He decided to just use his smart phone instead']
+
+[COREF]
+event: Tim saw they had dial up
+chain: ['Tim was visiting his grandparents', "They didn't have wifi or fast internet", 'Their connection was still using dial up', '***Tim tried to use the internet but it was just too slow', 'He decided to just use his smart phone instead']
+
+[COREF]
+event: she loses four times
+chain: ['Mary always bragged about how good she was at bowling', "Mary's co-worker Steve challenged her to a bowling competition", '***Steve beat Mary four times in a row', 'Mary sat on the steps with a sad look on her face', 'How was she to know that Steve was a college bowling champion?']
+
+[COREF]
+event: she loses four times
+chain: ['Mary always bragged about how good she was at bowling', "Mary's co-worker Steve challenged her to a bowling competition", '***Steve beat Mary four times in a row', 'Mary sat on the steps with a sad look on her face', 'How was she to know that Steve was a college bowling champion?']
+
+[SRL]
+sentence: The lamp puncture his flesh
+SRL: {'verbs': [], 'words': ['The', 'lamp', 'puncture', 'his', 'flesh']}
+
+[SRL]
+sentence: The lamp puncture his flesh
+SRL: {'verbs': [], 'words': ['The', 'lamp', 'puncture', 'his', 'flesh']}
+
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: Jenny like the pink ones
+SRL: {'verbs': [], 'words': ['Jenny', 'like', 'the', 'pink', 'ones']}
+
+[SRL]
+sentence: Jenny like the pink ones
+SRL: {'verbs': [], 'words': ['Jenny', 'like', 'the', 'pink', 'ones']}
+
+[SRL]
+sentence: her boyfriend call
+SRL: {'verbs': [], 'words': ['her', 'boyfriend', 'call']}
+
+[SRL]
+sentence: her boyfriend call
+SRL: {'verbs': [], 'words': ['her', 'boyfriend', 'call']}
+
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: the end of the trip
+SRL: {'verbs': [], 'words': ['the', 'end', 'of', 'the', 'trip']}
+
+[SRL]
+sentence: the end of the trip
+SRL: {'verbs': [], 'words': ['the', 'end', 'of', 'the', 'trip']}
+
+[SPLIT_TMP_AFTER]
+Input: Randy needed a drink after work
+Output: ['work', 'Randy needed a drink']
+
+[SPLIT_TMP_AFTER]
+Input: Randy needed a drink after work
+Output: ['work', 'Randy needed a drink']
+
+[SRL]
+sentence: Matilda plant each seed of corn by hand
+SRL: {'verbs': [], 'words': ['Matilda', 'plant', 'each', 'seed', 'of', 'corn', 'by', 'hand']}
+
+[SRL]
+sentence: Matilda plant each seed of corn by hand
+SRL: {'verbs': [], 'words': ['Matilda', 'plant', 'each', 'seed', 'of', 'corn', 'by', 'hand']}
+
+[COREF]
+event: he watched a childhood TV show
+chain: ['***Rick was watching TV', "And he noticed that there was nothing to watch but children's shows", 'One of the shows he remembered', 'And he used to watch it when he was a child', 'Rick enjoyed being reminded of his childhood']
+
+[COREF]
+event: he watched a childhood TV show
+chain: ['***Rick was watching TV', "And he noticed that there was nothing to watch but children's shows", 'One of the shows he remembered', 'And he used to watch it when he was a child', 'Rick enjoyed being reminded of his childhood']
+
+[SRL]
+sentence: the celebration
+SRL: {'verbs': [], 'words': ['the', 'celebration']}
+
+[COREF]
+event: the celebration
+chain: ['My girlfriend and I went to the outer banks for Thanksgiving', 'We went to visit her family', 'It was a long drive', 'There was lots of traffic on the way', '***We still made it in time to celebrate with everyone']
+
+[SRL]
+sentence: the celebration
+SRL: {'verbs': [], 'words': ['the', 'celebration']}
+
+[COREF]
+event: the celebration
+chain: ['My girlfriend and I went to the outer banks for Thanksgiving', 'We went to visit her family', 'It was a long drive', 'There was lots of traffic on the way', '***We still made it in time to celebrate with everyone']
+
+[COREF]
+event: the sticky wrap came
+chain: ['Bob needed to keep some drawers closed', 'He found a sticky wrap online and ordered it', "***When it came Bob wasn't very confident it would work", 'He wrapped it to itself around his set of plastic drawers', 'Bob was happy to see the wrap worked exactly like it should']
+
+[COREF]
+event: the sticky wrap came
+chain: ['Bob needed to keep some drawers closed', 'He found a sticky wrap online and ordered it', "***When it came Bob wasn't very confident it would work", 'He wrapped it to itself around his set of plastic drawers', 'Bob was happy to see the wrap worked exactly like it should']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+[SRL]
+sentence: the game
+SRL: {'verbs': [], 'words': ['the', 'game']}
+
+[SRL]
+sentence: the game
+SRL: {'verbs': [], 'words': ['the', 'game']}
+
+[SPLIT_TMP_AFTER]
+Input: Alas, I could not find a job after six months of searching
+Output: ['six months of searching', 'Alas , I could not find a job']
+
+[SPLIT_TMP_AFTER]
+Input: Alas, I could not find a job after six months of searching
+Output: ['six months of searching', 'Alas , I could not find a job']
+
+[SRL]
+sentence: My friend Kyle work for the Philadelphia Phillies
+SRL: {'verbs': [], 'words': ['My', 'friend', 'Kyle', 'work', 'for', 'the', 'Philadelphia', 'Phillies']}
+
+[SRL]
+sentence: My friend Kyle work for the Philadelphia Phillies
+SRL: {'verbs': [], 'words': ['My', 'friend', 'Kyle', 'work', 'for', 'the', 'Philadelphia', 'Phillies']}
+
+[SRL]
+sentence: My cat jump on the blanket
+SRL: {'verbs': [], 'words': ['My', 'cat', 'jump', 'on', 'the', 'blanket']}
+
+[SPLIT_TMP_AFTER]
+Input: My cat immediately jumps on the blanket after it is folded
+Output: ['it is folded', 'My cat immediately jumps on the blanket']
+
+[SRL]
+sentence: My cat jump on the blanket
+SRL: {'verbs': [], 'words': ['My', 'cat', 'jump', 'on', 'the', 'blanket']}
+
+[SPLIT_TMP_AFTER]
+Input: My cat immediately jumps on the blanket after it is folded
+Output: ['it is folded', 'My cat immediately jumps on the blanket']
+
+[SRL]
+sentence: the fundraiser call Ellen
+SRL: {'verbs': [], 'words': ['the', 'fundraiser', 'call', 'Ellen']}
+
+[SRL]
+sentence: the fundraiser call Ellen
+SRL: {'verbs': [], 'words': ['the', 'fundraiser', 'call', 'Ellen']}
+
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_BEFORE]
+Input: Everyone managed to escape before the ship sunk
+Output: ['Everyone managed to escape', 'the ship sunk']
+
+[SPLIT_TMP_BEFORE]
+Input: Everyone managed to escape before the ship sunk
+Output: ['Everyone managed to escape', 'the ship sunk']
+
+[COREF]
+event: Carter climbed out of his crib
+chain: ['Carter slept in his crib', '***In the morning, he climbed out of it', 'His dad transitioned the bed into a toddler bed', 'Carter discovered that he could just get into his bed without climbing', 'Carter now sleeps in his toddler bed']
+
+[COREF]
+event: Carter climbed out of his crib
+chain: ['Carter slept in his crib', '***In the morning, he climbed out of it', 'His dad transitioned the bed into a toddler bed', 'Carter discovered that he could just get into his bed without climbing', 'Carter now sleeps in his toddler bed']
+
+[SPLIT_TMP_AFTER]
+Input: My cat immediately jumps on the blanket after it is folded
+Output: ['it is folded', 'My cat immediately jumps on the blanket']
+
+[SPLIT_TMP_AFTER]
+Input: My cat immediately jumps on the blanket after it is folded
+Output: ['it is folded', 'My cat immediately jumps on the blanket']
+
+*** Warning ***
+*** Warning ***
+[COREF]
+event: he grabbed the baby food
+chain: ['Tim was being fed some baby food', 'He was extra fussy today', '***Tim grabbed it and threw it all over the place', 'It was all too messed up to try and feed him', 'Tim was given a bottle instead']
+
+[COREF]
+event: he grabbed the baby food
+chain: ['Tim was being fed some baby food', 'He was extra fussy today', '***Tim grabbed it and threw it all over the place', 'It was all too messed up to try and feed him', 'Tim was given a bottle instead']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: She spent hours soaking the beans before cooking them
+Output: ['She spent hours soaking the beans', 'cooking them']
+
+[SPLIT_TMP_BEFORE]
+Input: She spent hours soaking the beans before cooking them
+Output: ['She spent hours soaking the beans', 'cooking them']
+
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: The dog's owner through a frisbee in Tom's direction
+SRL: {'verbs': [], 'words': ['The', 'dog', "'s", 'owner', 'through', 'a', 'frisbee', 'in', 'Tom', "'s", 'direction']}
+
+[SRL]
+sentence: The dog's owner through a frisbee in Tom's direction
+SRL: {'verbs': [], 'words': ['The', 'dog', "'s", 'owner', 'through', 'a', 'frisbee', 'in', 'Tom', "'s", 'direction']}
+
+[SRL]
+sentence: His family plan for the worst
+SRL: {'verbs': [], 'words': ['His', 'family', 'plan', 'for', 'the', 'worst']}
+
+[SRL]
+sentence: His family plan for the worst
+SRL: {'verbs': [], 'words': ['His', 'family', 'plan', 'for', 'the', 'worst']}
+
+[SRL]
+sentence: Nia love pizza
+SRL: {'verbs': [], 'words': ['Nia', 'love', 'pizza']}
+
+[SRL]
+sentence: Nia love pizza
+SRL: {'verbs': [], 'words': ['Nia', 'love', 'pizza']}
+
+[SPLIT_TMP_AFTER]
+Input: Randy needed a drink after work
+Output: ['work', 'Randy needed a drink']
+
+[SPLIT_TMP_AFTER]
+Input: Randy needed a drink after work
+Output: ['work', 'Randy needed a drink']
+
+[COREF]
+event: they gave her another ice cream cone
+chain: ['Mary loves to buy ice cream from the Ice Cream Truck', 'One day Mary bought a snow cone from the truck', 'She was enjoying her snow cone', 'Unfortunately Mary accidentally dropped her cone', '***The driver of the Ice cream Truck was nice and gave Mary another one']
+
+[COREF]
+event: they gave her another ice cream cone
+chain: ['Mary loves to buy ice cream from the Ice Cream Truck', 'One day Mary bought a snow cone from the truck', 'She was enjoying her snow cone', 'Unfortunately Mary accidentally dropped her cone', '***The driver of the Ice cream Truck was nice and gave Mary another one']
+
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+[COREF]
+event: taking the dice out
+chain: ['Tim and John were good friends', 'They desired to play a game together', 'Tim mentioned he had dice in his pocket', 'John suggested they play dice', '***They played dice']
+
+[COREF]
+event: taking the dice out
+chain: ['Tim and John were good friends', 'They desired to play a game together', 'Tim mentioned he had dice in his pocket', 'John suggested they play dice', '***They played dice']
+
+[SPLIT_TMP_AFTER]
+Input: I got into my car after work
+Output: ['work', 'I got into my car']
+
+[SPLIT_TMP_AFTER]
+Input: I got into my car after work
+Output: ['work', 'I got into my car']
+
+*** Warning ***
+*** Warning ***
+[COREF]
+event: they started playing ball
+chain: ['***Michael was playing ball with his friends', 'His friend tossed the ball to him', 'Instead, it landed up on the roof', 'Michael decided to climb up to get it', 'Luckily, he was able to find it']
+
+[COREF]
+event: they started playing ball
+chain: ['***Michael was playing ball with his friends', 'His friend tossed the ball to him', 'Instead, it landed up on the roof', 'Michael decided to climb up to get it', 'Luckily, he was able to find it']
+
+[SRL]
+sentence: Martha's mother worried about her
+SRL: {'verbs': [], 'words': ['Martha', "'s", 'mother', 'worried', 'about', 'her']}
+
+[COREF]
+event: Martha called her up
+chain: ['Martha was living by herself', 'She was lonely being by herself', '***She called up her mother', 'Her mother came to visit her the next day', 'Martha felt better in the company of her mother']
+
+[SRL]
+sentence: Martha's mother worried about her
+SRL: {'verbs': [], 'words': ['Martha', "'s", 'mother', 'worried', 'about', 'her']}
+
+[COREF]
+event: Martha called her up
+chain: ['Martha was living by herself', 'She was lonely being by herself', '***She called up her mother', 'Her mother came to visit her the next day', 'Martha felt better in the company of her mother']
+
+[SRL]
+sentence: They well inside a sewer cage
+SRL: {'verbs': [], 'words': ['They', 'well', 'inside', 'a', 'sewer', 'cage']}
+
+[SRL]
+sentence: They well inside a sewer cage
+SRL: {'verbs': [], 'words': ['They', 'well', 'inside', 'a', 'sewer', 'cage']}
+
+[SRL]
+sentence: The coral snake bit Juan on his ankle
+SRL: {'verbs': [], 'words': ['The', 'coral', 'snake', 'bit', 'Juan', 'on', 'his', 'ankle']}
+
+[SRL]
+sentence: The coral snake bit Juan on his ankle
+SRL: {'verbs': [], 'words': ['The', 'coral', 'snake', 'bit', 'Juan', 'on', 'his', 'ankle']}
+
+*** Warning ***
+*** Warning ***
+[COREF]
+event: they started playing ball
+chain: ['***Michael was playing ball with his friends', 'His friend tossed the ball to him', 'Instead, it landed up on the roof', 'Michael decided to climb up to get it', 'Luckily, he was able to find it']
+
+[COREF]
+event: they started playing ball
+chain: ['***Michael was playing ball with his friends', 'His friend tossed the ball to him', 'Instead, it landed up on the roof', 'Michael decided to climb up to get it', 'Luckily, he was able to find it']
+
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: Danny strap on his skates
+SRL: {'verbs': [], 'words': ['Danny', 'strap', 'on', 'his', 'skates']}
+
+[SRL]
+sentence: Danny strap on his skates
+SRL: {'verbs': [], 'words': ['Danny', 'strap', 'on', 'his', 'skates']}
+
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_AFTER]
+Input: Alas, I could not find a job after six months of searching
+Output: ['six months of searching', 'Alas , I could not find a job']
+
+[SPLIT_TMP_AFTER]
+Input: Alas, I could not find a job after six months of searching
+Output: ['six months of searching', 'Alas , I could not find a job']
+
+[SPLIT_TMP_AFTER]
+Input: Alas, I could not find a job after six months of searching
+Output: ['six months of searching', 'Alas , I could not find a job']
+
+[SPLIT_TMP_AFTER]
+Input: Alas, I could not find a job after six months of searching
+Output: ['six months of searching', 'Alas , I could not find a job']
+
+[COREF]
+event: bus was offered
+chain: ['I was flying back to the US and booked a regional flight separately', '***This flight broke down and the company offered to bus us', 'I ended up missing my flight and had to stay the night', 'I knew someone loosely who was in the area so they let me stay', 'I got a bed and a new friend because of a delay']
+
+[COREF]
+event: bus was offered
+chain: ['I was flying back to the US and booked a regional flight separately', '***This flight broke down and the company offered to bus us', 'I ended up missing my flight and had to stay the night', 'I knew someone loosely who was in the area so they let me stay', 'I got a bed and a new friend because of a delay']
+
+[SRL]
+sentence: Danny skate right into the man 's car
+SRL: {'verbs': [], 'words': ['Danny', 'skate', 'right', 'into', 'the', 'man', "'s", 'car']}
+
+[SRL]
+sentence: Danny skate right into the man 's car
+SRL: {'verbs': [], 'words': ['Danny', 'skate', 'right', 'into', 'the', 'man', "'s", 'car']}
+
+*** Warning ***
+*** Warning ***
+[COREF]
+event: she cleaned the window
+chain: ['Sue got in her car and frowned at how filthy the window was', "Her dog's nose had made quite a mess of the glass", 'She wondered if he had worked hard to create that window art for her', '***Sue sort of felt bad as she cleaned it away', 'The next day, her dog created a new masterpiece on the window']
+
+[COREF]
+event: she cleaned the window
+chain: ['Sue got in her car and frowned at how filthy the window was', "Her dog's nose had made quite a mess of the glass", 'She wondered if he had worked hard to create that window art for her', '***Sue sort of felt bad as she cleaned it away', 'The next day, her dog created a new masterpiece on the window']
+
+[COREF]
+event: the barbarian and his tribesman ran over to the foreigners
+chain: ['A barbarian was walking through the woods one day', "He noticed a foreign tribe by his tribe's river", '***He ran home and warned his fellow tribesman', 'They ran over to the foreigners and engaged in combat', 'The other tribe fled and the barbarian and his tribe went home']
+
+[COREF]
+event: the barbarian and his tribesman ran over to the foreigners
+chain: ['A barbarian was walking through the woods one day', "He noticed a foreign tribe by his tribe's river", '***He ran home and warned his fellow tribesman', 'They ran over to the foreigners and engaged in combat', 'The other tribe fled and the barbarian and his tribe went home']
+
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_AFTER]
+Input: I got into my car after work
+Output: ['work', 'I got into my car']
+
+[SPLIT_TMP_AFTER]
+Input: I got into my car after work
+Output: ['work', 'I got into my car']
+
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: The coral snake bit Juan on his ankle
+SRL: {'verbs': [], 'words': ['The', 'coral', 'snake', 'bit', 'Juan', 'on', 'his', 'ankle']}
+
+[SRL]
+sentence: The coral snake bit Juan on his ankle
+SRL: {'verbs': [], 'words': ['The', 'coral', 'snake', 'bit', 'Juan', 'on', 'his', 'ankle']}
+
+[SPLIT_TMP_BEFORE]
+Input: She smiled and joked with him before opening the door
+Output: ['She smiled and joked with him', 'opening the door']
+
+[SPLIT_TMP_BEFORE]
+Input: She smiled and joked with him before opening the door
+Output: ['She smiled and joked with him', 'opening the door']
+
+[COREF]
+event: he hung the masterpieces up
+chain: ['David watched an episode on TV about a horse that paints', 'He thought surely his smart horses could do this, too', 'At the art store, he bought large canvases, brushes, and acrylics', 'He taught the horse to hold the brush in his mouth by the handle', '***David hung his horses masterpieces all over the barn']
+
+[COREF]
+event: he hung the masterpieces up
+chain: ['David watched an episode on TV about a horse that paints', 'He thought surely his smart horses could do this, too', 'At the art store, he bought large canvases, brushes, and acrylics', 'He taught the horse to hold the brush in his mouth by the handle', '***David hung his horses masterpieces all over the barn']
+
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: Martha's mother worried about her
+SRL: {'verbs': [], 'words': ['Martha', "'s", 'mother', 'worried', 'about', 'her']}
+
+[SRL]
+sentence: Martha's mother worried about her
+SRL: {'verbs': [], 'words': ['Martha', "'s", 'mother', 'worried', 'about', 'her']}
+
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: Juan work for a local landscaping company
+SRL: {'verbs': [], 'words': ['Juan', 'work', 'for', 'a', 'local', 'landscaping', 'company']}
+
+[SRL]
+sentence: The coral snake bit Juan on his ankle
+SRL: {'verbs': [], 'words': ['The', 'coral', 'snake', 'bit', 'Juan', 'on', 'his', 'ankle']}
+
+[SRL]
+sentence: Juan work for a local landscaping company
+SRL: {'verbs': [], 'words': ['Juan', 'work', 'for', 'a', 'local', 'landscaping', 'company']}
+
+[SRL]
+sentence: The coral snake bit Juan on his ankle
+SRL: {'verbs': [], 'words': ['The', 'coral', 'snake', 'bit', 'Juan', 'on', 'his', 'ankle']}
+
+[SRL]
+sentence: the fundraiser call Ellen
+SRL: {'verbs': [], 'words': ['the', 'fundraiser', 'call', 'Ellen']}
+
+[SRL]
+sentence: the fundraiser call Ellen
+SRL: {'verbs': [], 'words': ['the', 'fundraiser', 'call', 'Ellen']}
+
+[SRL]
+sentence: the fundraiser call Ellen
+SRL: {'verbs': [], 'words': ['the', 'fundraiser', 'call', 'Ellen']}
+
+[SRL]
+sentence: the fundraiser call Ellen
+SRL: {'verbs': [], 'words': ['the', 'fundraiser', 'call', 'Ellen']}
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[COREF]
+event: the food was cooked
+chain: ['I woke up and I was very hungry', 'I went to the kitchen to make breakfast', 'I got eggs and sausage from the fridge', '***I cooked the food and made toast and poured a glass of milk', 'I sat down and enjoyed the meal']
+
+[COREF]
+event: the food was cooked
+chain: ['I woke up and I was very hungry', 'I went to the kitchen to make breakfast', 'I got eggs and sausage from the fridge', '***I cooked the food and made toast and poured a glass of milk', 'I sat down and enjoyed the meal']
+
+[SRL]
+sentence: the cat return
+SRL: {'verbs': [], 'words': ['the', 'cat', 'return']}
+
+[SRL]
+sentence: the cat return
+SRL: {'verbs': [], 'words': ['the', 'cat', 'return']}
+
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: She smiled and joked with him before opening the door
+Output: ['She smiled and joked with him', 'opening the door']
+
+[SPLIT_TMP_BEFORE]
+Input: She smiled and joked with him before opening the door
+Output: ['She smiled and joked with him', 'opening the door']
+
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: The dog's owner through a frisbee in Tom's direction
+SRL: {'verbs': [], 'words': ['The', 'dog', "'s", 'owner', 'through', 'a', 'frisbee', 'in', 'Tom', "'s", 'direction']}
+
+[SRL]
+sentence: The dog's owner through a frisbee in Tom's direction
+SRL: {'verbs': [], 'words': ['The', 'dog', "'s", 'owner', 'through', 'a', 'frisbee', 'in', 'Tom', "'s", 'direction']}
+
+[SRL]
+sentence: Danny strap on his skates
+SRL: {'verbs': [], 'words': ['Danny', 'strap', 'on', 'his', 'skates']}
+
+[SRL]
+sentence: Danny strap on his skates
+SRL: {'verbs': [], 'words': ['Danny', 'strap', 'on', 'his', 'skates']}
+
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_BEFORE]
+Input: She smiled and joked with him before opening the door
+Output: ['She smiled and joked with him', 'opening the door']
+
+[SPLIT_TMP_BEFORE]
+Input: She smiled and joked with him before opening the door
+Output: ['She smiled and joked with him', 'opening the door']
+
+[COREF]
+event: he hung the paintings up
+chain: ['David watched an episode on TV about a horse that paints', 'He thought surely his smart horses could do this, too', 'At the art store, he bought large canvases, brushes, and acrylics', 'He taught the horse to hold the brush in his mouth by the handle', '***David hung his horses masterpieces all over the barn']
+
+[COREF]
+event: he hung the paintings up
+chain: ['David watched an episode on TV about a horse that paints', 'He thought surely his smart horses could do this, too', 'At the art store, he bought large canvases, brushes, and acrylics', 'He taught the horse to hold the brush in his mouth by the handle', '***David hung his horses masterpieces all over the barn']
+
+[SPLIT_TMP_AFTER]
+Input: Alas, I could not find a job after six months of searching
+Output: ['six months of searching', 'Alas , I could not find a job']
+
+[SPLIT_TMP_AFTER]
+Input: Alas, I could not find a job after six months of searching
+Output: ['six months of searching', 'Alas , I could not find a job']
+
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+[COREF]
+event: being nauseous
+chain: ['Maggie was a pregnant lady', 'One morning she was trying to brush her teeth', 'No matter what she did, the toothbrush made her gag', '***The more she tried the more nausea she felt', 'She eventually gave up and just used mouthwash']
+
+[COREF]
+event: being nauseous
+chain: ['Maggie was a pregnant lady', 'One morning she was trying to brush her teeth', 'No matter what she did, the toothbrush made her gag', '***The more she tried the more nausea she felt', 'She eventually gave up and just used mouthwash']
+
+[SRL]
+sentence: Carter sleep in his toddler bed
+SRL: {'verbs': [], 'words': ['Carter', 'sleep', 'in', 'his', 'toddler', 'bed']}
+
+[SRL]
+sentence: Carter sleep in his toddler bed
+SRL: {'verbs': [], 'words': ['Carter', 'sleep', 'in', 'his', 'toddler', 'bed']}
+
+[COREF]
+event: he bet on the lottery numbers
+chain: ['Hocus Pocus found the dusty Diary', 'Inside were a string of numbers', 'He thought they were lottery numbers', '***He bet on them', 'They were milk production weights for a cow']
+
+[COREF]
+event: he bet on the lottery numbers
+chain: ['Hocus Pocus found the dusty Diary', 'Inside were a string of numbers', 'He thought they were lottery numbers', '***He bet on them', 'They were milk production weights for a cow']
+
+[COREF]
+event: she had saved enough to get a new car
+chain: ['Anna needed a new car', 'Her old was was always breaking down', '***So she got a second part-time job', 'She saved up her paychecks', 'Soon she could afford a new car!']
+
+[COREF]
+event: she had saved enough to get a new car
+chain: ['Anna needed a new car', 'Her old was was always breaking down', '***So she got a second part-time job', 'She saved up her paychecks', 'Soon she could afford a new car!']
+
+[COREF]
+event: dusk when dinner was ready
+chain: ["Lagertha didn't like being told what to do", 'Her mother told her to clean her room', 'Lagertha refused, and went outside to play with her friends', '***When she returned at dusk, there was candy and roast lamb to eat', 'Her mother forbid her to have any though, and sent her to her room']
+
+[COREF]
+event: dusk when dinner was ready
+chain: ["Lagertha didn't like being told what to do", 'Her mother told her to clean her room', 'Lagertha refused, and went outside to play with her friends', '***When she returned at dusk, there was candy and roast lamb to eat', 'Her mother forbid her to have any though, and sent her to her room']
+
+[SPLIT_TMP_AFTER]
+Input: Alas, I could not find a job after six months of searching
+Output: ['six months of searching', 'Alas , I could not find a job']
+
+[SPLIT_TMP_AFTER]
+Input: Alas, I could not find a job after six months of searching
+Output: ['six months of searching', 'Alas , I could not find a job']
+
+[SRL]
+sentence: Unfortunately she spill dye on it
+SRL: {'verbs': [], 'words': ['Unfortunately', 'she', 'spill', 'dye', 'on', 'it']}
+
+[SRL]
+sentence: Unfortunately she spill dye on it
+SRL: {'verbs': [], 'words': ['Unfortunately', 'she', 'spill', 'dye', 'on', 'it']}
+
+[SRL]
+sentence: The door close too hard
+SRL: {'verbs': [], 'words': ['The', 'door', 'close', 'too', 'hard']}
+
+[SRL]
+sentence: The door close too hard
+SRL: {'verbs': [], 'words': ['The', 'door', 'close', 'too', 'hard']}
+
+[COREF]
+event: he left home unsatisfied
+chain: ['Milwaukee resident Wallace wanted to go swimming in the lake', 'It was early September, and he donned his swim trunks', 'He drove to the lake and found parking', 'The water was already far too cold for him to swim', '***Wallace went home unsatisfied']
+
+[COREF]
+event: he left home unsatisfied
+chain: ['Milwaukee resident Wallace wanted to go swimming in the lake', 'It was early September, and he donned his swim trunks', 'He drove to the lake and found parking', 'The water was already far too cold for him to swim', '***Wallace went home unsatisfied']
+
+[SRL]
+sentence: The door close too hard
+SRL: {'verbs': [], 'words': ['The', 'door', 'close', 'too', 'hard']}
+
+[SRL]
+sentence: The door close too hard
+SRL: {'verbs': [], 'words': ['The', 'door', 'close', 'too', 'hard']}
+
+[SRL]
+sentence: Much change for both schools
+SRL: {'verbs': [], 'words': ['Much', 'change', 'for', 'both', 'schools']}
+
+[SRL]
+sentence: Much change for both schools
+SRL: {'verbs': [], 'words': ['Much', 'change', 'for', 'both', 'schools']}
+
+[SRL]
+sentence: The dog's owner through a frisbee in Tom's direction
+SRL: {'verbs': [], 'words': ['The', 'dog', "'s", 'owner', 'through', 'a', 'frisbee', 'in', 'Tom', "'s", 'direction']}
+
+[SRL]
+sentence: The dog's owner through a frisbee in Tom's direction
+SRL: {'verbs': [], 'words': ['The', 'dog', "'s", 'owner', 'through', 'a', 'frisbee', 'in', 'Tom', "'s", 'direction']}
+
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_AFTER]
+Input: Randy needed a drink after work
+Output: ['work', 'Randy needed a drink']
+
+[SPLIT_TMP_AFTER]
+Input: Randy needed a drink after work
+Output: ['work', 'Randy needed a drink']
+
+[COREF]
+event: he recovered
+chain: ['Tom and his friends decided to go hiking', 'While hiking Tom tripped and fell down a cliff', 'He was injured so his friends called for help', 'Search and rescue came and saved Tom', '***After a two weeks in the hospital Tom recovered']
+
+[COREF]
+event: he recovered
+chain: ['Tom and his friends decided to go hiking', 'While hiking Tom tripped and fell down a cliff', 'He was injured so his friends called for help', 'Search and rescue came and saved Tom', '***After a two weeks in the hospital Tom recovered']
+
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: Sara order a one tier cake and baked matching cupcakes
+SRL: {'verbs': [], 'words': ['Sara', 'order', 'a', 'one', 'tier', 'cake', 'and', 'baked', 'matching', 'cupcakes']}
+
+[SRL]
+sentence: Sara order a one tier cake and baked matching cupcakes
+SRL: {'verbs': [], 'words': ['Sara', 'order', 'a', 'one', 'tier', 'cake', 'and', 'baked', 'matching', 'cupcakes']}
+
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: They well inside a sewer cage
+SRL: {'verbs': [], 'words': ['They', 'well', 'inside', 'a', 'sewer', 'cage']}
+
+[SRL]
+sentence: They well inside a sewer cage
+SRL: {'verbs': [], 'words': ['They', 'well', 'inside', 'a', 'sewer', 'cage']}
+
+[SPLIT_TMP_AFTER]
+Input: Alas, I could not find a job after six months of searching
+Output: ['six months of searching', 'Alas , I could not find a job']
+
+[SPLIT_TMP_AFTER]
+Input: Alas, I could not find a job after six months of searching
+Output: ['six months of searching', 'Alas , I could not find a job']
+
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+[COREF]
+event: he became fluent
+chain: ['John really wanted to learn the Russian language', 'John bought materials and began studying', 'John watched Russian movies without subtitles', 'John spent a month living in Russia', '***Now John is fluent in the Russian language']
+
+[COREF]
+event: he became fluent
+chain: ['John really wanted to learn the Russian language', 'John bought materials and began studying', 'John watched Russian movies without subtitles', 'John spent a month living in Russia', '***Now John is fluent in the Russian language']
+
+[COREF]
+event: Tina got to Stacy
+chain: ['Tina told Stacy she would pick her up at eight', 'So Stacy waited outside right at eight the next day', 'A half hour passed and no Tina', '***Stacy was getting irritated', 'By the time Tina got there an hour had passed']
+
+[COREF]
+event: Tina got to Stacy
+chain: ['Tina told Stacy she would pick her up at eight', 'So Stacy waited outside right at eight the next day', 'A half hour passed and no Tina', '***Stacy was getting irritated', 'By the time Tina got there an hour had passed']
+
+[SPLIT_TMP_AFTER]
+Input: Randy needed a drink after work
+Output: ['work', 'Randy needed a drink']
+
+[SPLIT_TMP_AFTER]
+Input: Randy needed a drink after work
+Output: ['work', 'Randy needed a drink']
+
+[SRL]
+sentence: The dog's owner through a frisbee in Tom's direction
+SRL: {'verbs': [], 'words': ['The', 'dog', "'s", 'owner', 'through', 'a', 'frisbee', 'in', 'Tom', "'s", 'direction']}
+
+[SRL]
+sentence: The dog's owner through a frisbee in Tom's direction
+SRL: {'verbs': [], 'words': ['The', 'dog', "'s", 'owner', 'through', 'a', 'frisbee', 'in', 'Tom', "'s", 'direction']}
+
+[SRL]
+sentence: The lamp puncture his flesh
+SRL: {'verbs': [], 'words': ['The', 'lamp', 'puncture', 'his', 'flesh']}
+
+[SRL]
+sentence: The lamp puncture his flesh
+SRL: {'verbs': [], 'words': ['The', 'lamp', 'puncture', 'his', 'flesh']}
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_AFTER]
+Input: Randy needed a drink after work
+Output: ['work', 'Randy needed a drink']
+
+[SPLIT_TMP_AFTER]
+Input: Randy needed a drink after work
+Output: ['work', 'Randy needed a drink']
+
+[SPLIT_TMP_AFTER]
+Input: I got into my car after work
+Output: ['work', 'I got into my car']
+
+[COREF]
+event: it spun
+chain: ['work', 'I got into my car', 'A coworker challenged me to a race', 'We were still in the parking lot', 'I gassed it very hard, trying to win', '***My car spun and started doing donuts']
+
+[SPLIT_TMP_AFTER]
+Input: I got into my car after work
+Output: ['work', 'I got into my car']
+
+[COREF]
+event: it spun
+chain: ['work', 'I got into my car', 'A coworker challenged me to a race', 'We were still in the parking lot', 'I gassed it very hard, trying to win', '***My car spun and started doing donuts']
+
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: The dog's owner through a frisbee in Tom's direction
+SRL: {'verbs': [], 'words': ['The', 'dog', "'s", 'owner', 'through', 'a', 'frisbee', 'in', 'Tom', "'s", 'direction']}
+
+[SRL]
+sentence: The dog's owner through a frisbee in Tom's direction
+SRL: {'verbs': [], 'words': ['The', 'dog', "'s", 'owner', 'through', 'a', 'frisbee', 'in', 'Tom', "'s", 'direction']}
+
+[SRL]
+sentence: her boyfriend call
+SRL: {'verbs': [], 'words': ['her', 'boyfriend', 'call']}
+
+[SRL]
+sentence: her boyfriend call
+SRL: {'verbs': [], 'words': ['her', 'boyfriend', 'call']}
+
+[COREF]
+event: putting the ingredients away
+chain: ['Daisy decided that she wanted to make some cookies', 'She began placing the ingredients onto the kitchen counter', 'Daisy began mixing milk and sugar into a bowl', "She opened up the egg carton and realized she didn't have enough eggs", '***Annoyed, she put everything away and left the kitchen']
+
+[COREF]
+event: putting the ingredients away
+chain: ['Daisy decided that she wanted to make some cookies', 'She began placing the ingredients onto the kitchen counter', 'Daisy began mixing milk and sugar into a bowl', "She opened up the egg carton and realized she didn't have enough eggs", '***Annoyed, she put everything away and left the kitchen']
+
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: the scouts cheer
+SRL: {'verbs': [], 'words': ['the', 'scouts', 'cheer']}
+
+[SRL]
+sentence: the scouts cheer
+SRL: {'verbs': [], 'words': ['the', 'scouts', 'cheer']}
+
+[SRL]
+sentence: The couple complain
+SRL: {'verbs': [], 'words': ['The', 'couple', 'complain']}
+
+[SRL]
+sentence: The couple complain
+SRL: {'verbs': [], 'words': ['The', 'couple', 'complain']}
+
+[COREF]
+event: everyone likes presentation
+chain: ['Tom has a big presentation at work tomorrow', 'He has not prepared for the presentation', 'He works all night long to present something for tomorrow', 'He spilled coffee on the USB stick containing his presentation', '***He gets to work and wings his presentation, everyone loves it']
+
+[COREF]
+event: everyone likes presentation
+chain: ['Tom has a big presentation at work tomorrow', 'He has not prepared for the presentation', 'He works all night long to present something for tomorrow', 'He spilled coffee on the USB stick containing his presentation', '***He gets to work and wings his presentation, everyone loves it']
+
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_BEFORE]
+Input: She smiled and joked with him before opening the door
+Output: ['She smiled and joked with him', 'opening the door']
+
+[SPLIT_TMP_BEFORE]
+Input: She smiled and joked with him before opening the door
+Output: ['She smiled and joked with him', 'opening the door']
+
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[SPLIT_TMP_AFTER]
+Input: I got into my car after work
+Output: ['work', 'I got into my car']
+
+[SPLIT_TMP_AFTER]
+Input: I got into my car after work
+Output: ['work', 'I got into my car']
+
+[COREF]
+event: practice starts
+chain: ['Jim was a football player', '***One day at practice he got hit really hard', 'He stood up and then fell back down', 'The team medic was sent over immediately', 'Jim was diagnosed with a concussion']
+
+[COREF]
+event: practice starts
+chain: ['Jim was a football player', '***One day at practice he got hit really hard', 'He stood up and then fell back down', 'The team medic was sent over immediately', 'Jim was diagnosed with a concussion']
+
+*** Warning ***
+*** Warning ***
+[COREF]
+event: they gave Mary another ice cream cone
+chain: ['Mary loves to buy ice cream from the Ice Cream Truck', 'One day Mary bought a snow cone from the truck', 'She was enjoying her snow cone', 'Unfortunately Mary accidentally dropped her cone', '***The driver of the Ice cream Truck was nice and gave Mary another one']
+
+[COREF]
+event: they gave Mary another ice cream cone
+chain: ['Mary loves to buy ice cream from the Ice Cream Truck', 'One day Mary bought a snow cone from the truck', 'She was enjoying her snow cone', 'Unfortunately Mary accidentally dropped her cone', '***The driver of the Ice cream Truck was nice and gave Mary another one']
+
+[SRL]
+sentence: The dog's owner through a frisbee in Tom's direction
+SRL: {'verbs': [], 'words': ['The', 'dog', "'s", 'owner', 'through', 'a', 'frisbee', 'in', 'Tom', "'s", 'direction']}
+
+[SRL]
+sentence: The dog's owner through a frisbee in Tom's direction
+SRL: {'verbs': [], 'words': ['The', 'dog', "'s", 'owner', 'through', 'a', 'frisbee', 'in', 'Tom', "'s", 'direction']}
+
+[SRL]
+sentence: They well inside a sewer cage
+SRL: {'verbs': [], 'words': ['They', 'well', 'inside', 'a', 'sewer', 'cage']}
+
+[SRL]
+sentence: They well inside a sewer cage
+SRL: {'verbs': [], 'words': ['They', 'well', 'inside', 'a', 'sewer', 'cage']}
+
+[SRL]
+sentence: undefined
+SRL: {'verbs': [], 'words': ['undefined']}
+
+[COREF]
+event: undefined
+chain: ['Jill is driving down the road', 'Her car starts to make a strange noise', '***She pulls over and checks the hood', "It's smoking everywhere", 'She calls triple A for help with her car']
+
+[SRL]
+sentence: undefined
+SRL: {'verbs': [], 'words': ['undefined']}
+
+[COREF]
+event: undefined
+chain: ['Jill is driving down the road', 'Her car starts to make a strange noise', '***She pulls over and checks the hood', "It's smoking everywhere", 'She calls triple A for help with her car']
+
+[SPLIT_TMP_AFTER]
+Input: Randy needed a drink after work
+Output: ['work', 'Randy needed a drink']
+
+[COREF]
+event: he got home from work
+chain: ['work', 'Randy needed a drink', 'He opened the refrigerator to look for a drink', '***He got a coke but he noticed another drink behind it', 'There was a beer hidden in the refrigerator', 'He got the beer and got drunk off of it for the night']
+
+[SPLIT_TMP_AFTER]
+Input: Randy needed a drink after work
+Output: ['work', 'Randy needed a drink']
+
+[COREF]
+event: he got home from work
+chain: ['work', 'Randy needed a drink', 'He opened the refrigerator to look for a drink', '***He got a coke but he noticed another drink behind it', 'There was a beer hidden in the refrigerator', 'He got the beer and got drunk off of it for the night']
+
+[SPLIT_TMP_AFTER]
+Input: My cat immediately jumps on the blanket after it is folded
+Output: ['it is folded', 'My cat immediately jumps on the blanket']
+
+[SPLIT_TMP_AFTER]
+Input: My cat immediately jumps on the blanket after it is folded
+Output: ['it is folded', 'My cat immediately jumps on the blanket']
+
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: the cat return
+SRL: {'verbs': [], 'words': ['the', 'cat', 'return']}
+
+[SRL]
+sentence: the cat return
+SRL: {'verbs': [], 'words': ['the', 'cat', 'return']}
+
+[SRL]
+sentence: No one notice
+SRL: {'verbs': [], 'words': ['No', 'one', 'notice']}
+
+[SRL]
+sentence: No one notice
+SRL: {'verbs': [], 'words': ['No', 'one', 'notice']}
+
+[SRL]
+sentence: the Christmas parade
+SRL: {'verbs': [], 'words': ['the', 'Christmas', 'parade']}
+
+[SRL]
+sentence: the Christmas parade
+SRL: {'verbs': [], 'words': ['the', 'Christmas', 'parade']}
+
+[SRL]
+sentence: the game
+SRL: {'verbs': [], 'words': ['the', 'game']}
+
+[SRL]
+sentence: the game
+SRL: {'verbs': [], 'words': ['the', 'game']}
+
+*** Warning ***
+*** Warning ***
+[COREF]
+event: they started playing ball
+chain: ['***Michael was playing ball with his friends', 'His friend tossed the ball to him', 'Instead, it landed up on the roof', 'Michael decided to climb up to get it', 'Luckily, he was able to find it']
+
+[COREF]
+event: they started playing ball
+chain: ['***Michael was playing ball with his friends', 'His friend tossed the ball to him', 'Instead, it landed up on the roof', 'Michael decided to climb up to get it', 'Luckily, he was able to find it']
+
+[SRL]
+sentence: A human walk around
+SRL: {'verbs': [], 'words': ['A', 'human', 'walk', 'around']}
+
+[SRL]
+sentence: A human walk around
+SRL: {'verbs': [], 'words': ['A', 'human', 'walk', 'around']}
+
+[COREF]
+event: Tim saw they had dial up
+chain: ['Tim was visiting his grandparents', "They didn't have wifi or fast internet", 'Their connection was still using dial up', '***Tim tried to use the internet but it was just too slow', 'He decided to just use his smart phone instead']
+
+[COREF]
+event: Tim saw they had dial up
+chain: ['Tim was visiting his grandparents', "They didn't have wifi or fast internet", 'Their connection was still using dial up', '***Tim tried to use the internet but it was just too slow', 'He decided to just use his smart phone instead']
+
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to have a walk around the block before he goes to bed
+Output: ['He decides to have a walk around the block', 'he goes to bed']
+
+[SPLIT_TMP_BEFORE]
+Input: He decides to take a walk every night before going to bed
+Output: ['He decides to take a walk every night', 'going to bed']
+
+[SRL]
+sentence: The coral snake bit Juan on his ankle
+SRL: {'verbs': [], 'words': ['The', 'coral', 'snake', 'bit', 'Juan', 'on', 'his', 'ankle']}
+
+[SRL]
+sentence: The coral snake bit Juan on his ankle
+SRL: {'verbs': [], 'words': ['The', 'coral', 'snake', 'bit', 'Juan', 'on', 'his', 'ankle']}
+
+*** Warning ***
+*** Warning ***
+*** Warning ***
+*** Warning ***
+[COREF]
+event: he apologized
+chain: ['Ana was playing in the snow with her brother', 'They were having a snowball fight', 'Suddenly, Anna felt a pain in her cheek', 'She saw that the snowball had had a rock in it', '***Her brother apologized and they quit fighting']
+
+[COREF]
+event: he apologized
+chain: ['Ana was playing in the snow with her brother', 'They were having a snowball fight', 'Suddenly, Anna felt a pain in her cheek', 'She saw that the snowball had had a rock in it', '***Her brother apologized and they quit fighting']
+
+[SRL]
+sentence: His family plan for the worst
+SRL: {'verbs': [], 'words': ['His', 'family', 'plan', 'for', 'the', 'worst']}
+
+[SRL]
+sentence: His family plan for the worst
+SRL: {'verbs': [], 'words': ['His', 'family', 'plan', 'for', 'the', 'worst']}
+
+[SPLIT_TMP_BEFORE]
+Input: Everyone managed to escape before the ship sunk
+Output: ['Everyone managed to escape', 'the ship sunk']
+
+[SPLIT_TMP_BEFORE]
+Input: Everyone managed to escape before the ship sunk
+Output: ['Everyone managed to escape', 'the ship sunk']
+
+[SRL]
+sentence: Debbie major in history at her university
+SRL: {'verbs': [], 'words': ['Debbie', 'major', 'in', 'history', 'at', 'her', 'university']}
+
+[SRL]
+sentence: Debbie major in history at her university
+SRL: {'verbs': [], 'words': ['Debbie', 'major', 'in', 'history', 'at', 'her', 'university']}
+
+[SRL]
+sentence: The coral snake bit Juan on his ankle
+SRL: {'verbs': [], 'words': ['The', 'coral', 'snake', 'bit', 'Juan', 'on', 'his', 'ankle']}
+
+[SRL]
+sentence: The coral snake bit Juan on his ankle
+SRL: {'verbs': [], 'words': ['The', 'coral', 'snake', 'bit', 'Juan', 'on', 'his', 'ankle']}
+
+[SRL]
+sentence: the owner
+SRL: {'verbs': [], 'words': ['the', 'owner']}
+
+[SRL]
+sentence: the owner
+SRL: {'verbs': [], 'words': ['the', 'owner']}
+
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+[SPLIT_TMP_AFTER]
+Input: Carol could barely keep her eyes open after arriving at work
+Output: ['arriving at work', 'Carol could barely keep her eyes open']
+
+[COREF]
+event: the referee had him kicked out
+chain: ['I was watching the game furious', '***This Referee had no idea what he was doing', 'He kept making bad calls', 'I yelled at him', 'Then he had the nerve to kick me out of the game']
+
+[COREF]
+event: the referee had him kicked out
+chain: ['I was watching the game furious', '***This Referee had no idea what he was doing', 'He kept making bad calls', 'I yelled at him', 'Then he had the nerve to kick me out of the game']
+
+[COREF]
+event: Sam dies
+chain: ['Sam loved to eat all kinds of salty bards', 'Since he was a youth, he consumed heavy amounts of salt', 'As Sam grew older, he continued pouring salt on everything', '***One day, Sam got very sick, and fell with a huge headache', 'The coroner found that it was too much salt, but it was too late']
+
+[COREF]
+event: Sam dies
+chain: ['Sam loved to eat all kinds of salty bards', 'Since he was a youth, he consumed heavy amounts of salt', 'As Sam grew older, he continued pouring salt on everything', '***One day, Sam got very sick, and fell with a huge headache', 'The coroner found that it was too much salt, but it was too late']
+
+[SRL]
+sentence: Debbie major in history at her university
+SRL: {'verbs': [], 'words': ['Debbie', 'major', 'in', 'history', 'at', 'her', 'university']}
+
+[SRL]
+sentence: Debbie major in history at her university
+SRL: {'verbs': [], 'words': ['Debbie', 'major', 'in', 'history', 'at', 'her', 'university']}
+
+[COREF]
+event: she sees the dress
+chain: ['Jenna collapsed on her bed in tears', 'Ben asked her to Spring Party, but she had no money for a dress', 'Just then her roommate, Marissa, entered, smiling', '***To her surprise, Marissa smiled and held out a beautiful dress', 'The dress fit perfectly and Jenna was able to go the party after all!']
+
+[COREF]
+event: she sees the dress
+chain: ['Jenna collapsed on her bed in tears', 'Ben asked her to Spring Party, but she had no money for a dress', 'Just then her roommate, Marissa, entered, smiling', '***To her surprise, Marissa smiled and held out a beautiful dress', 'The dress fit perfectly and Jenna was able to go the party after all!']
+
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: My friend Kyle work for the Philadelphia Phillies
+SRL: {'verbs': [], 'words': ['My', 'friend', 'Kyle', 'work', 'for', 'the', 'Philadelphia', 'Phillies']}
+
+[SRL]
+sentence: My friend Kyle work for the Philadelphia Phillies
+SRL: {'verbs': [], 'words': ['My', 'friend', 'Kyle', 'work', 'for', 'the', 'Philadelphia', 'Phillies']}
+
+[SRL]
+sentence: The coral snake bit Juan on his ankle
+SRL: {'verbs': [], 'words': ['The', 'coral', 'snake', 'bit', 'Juan', 'on', 'his', 'ankle']}
+
+[SRL]
+sentence: The coral snake bit Juan on his ankle
+SRL: {'verbs': [], 'words': ['The', 'coral', 'snake', 'bit', 'Juan', 'on', 'his', 'ankle']}
+
+[COREF]
+event: she started practicing everyday
+chain: ['***Jill has been practicing everyday so she can beat Roz at the big race', 'She has been running two times a day and only eating healthy food', 'On the day of the race, she feels ready', 'The officials start the race', 'Jill and Roz run a fair race and Jill wins!']
+
+[COREF]
+event: she started practicing everyday
+chain: ['***Jill has been practicing everyday so she can beat Roz at the big race', 'She has been running two times a day and only eating healthy food', 'On the day of the race, she feels ready', 'The officials start the race', 'Jill and Roz run a fair race and Jill wins!']
+
+*** Warning ***
+*** Warning ***
+[SRL]
+sentence: Much change for both schools
+SRL: {'verbs': [], 'words': ['Much', 'change', 'for', 'both', 'schools']}
+
+[SRL]
+sentence: Much change for both schools
+SRL: {'verbs': [], 'words': ['Much', 'change', 'for', 'both', 'schools']}
+
+*** Warning ***
+*** Warning ***
+[SPLIT_TMP_AFTER]
+Input: My cat immediately jumps on the blanket after it is folded
+Output: ['it is folded', 'My cat immediately jumps on the blanket']
+
+[SPLIT_TMP_AFTER]
+Input: My cat immediately jumps on the blanket after it is folded
+Output: ['it is folded', 'My cat immediately jumps on the blanket']
+
+[SRL]
+sentence: the celebration
+SRL: {'verbs': [], 'words': ['the', 'celebration']}
+
+[COREF]
+event: the celebration
+chain: ['My girlfriend and I went to the outer banks for Thanksgiving', 'We went to visit her family', 'It was a long drive', 'There was lots of traffic on the way', '***We still made it in time to celebrate with everyone']
+
+[SRL]
+sentence: the celebration
+SRL: {'verbs': [], 'words': ['the', 'celebration']}
+
+[COREF]
+event: the celebration
+chain: ['My girlfriend and I went to the outer banks for Thanksgiving', 'We went to visit her family', 'It was a long drive', 'There was lots of traffic on the way', '***We still made it in time to celebrate with everyone']
+
+*** Warning ***
+*** Warning ***
