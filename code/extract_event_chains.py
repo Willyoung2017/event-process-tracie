@@ -17,7 +17,7 @@ class SRLExtractor:
     srl_model_url = "https://storage.googleapis.com/allennlp-public-models/" \
                     "structured-prediction-srl-bert.2020.12.15.tar.gz"
     stemmer_class = nltk.stem.snowball.SnowballStemmer
-    sp_path = 'data/chains/special_cases.txt'
+    log_path = 'data/chains/extractor.log'
 
     def __init__(self, use_cuda=True):
         self.srl = Predictor.from_path(self.srl_model_url,
@@ -25,11 +25,11 @@ class SRLExtractor:
         self.stemmer = self.stemmer_class('english')
         self.lemmatizer = WordNetLemmatizer()
 
-        make_dir(self.sp_path)
-        self.sp_fout = open(self.sp_path, 'w')
+        make_dir(self.log_path)
+        self.log_fout = open(self.log_path, 'w')
 
     def free(self):
-        self.sp_fout.close()
+        self.log_fout.close()
 
     def select_verb(self, srl_dic, sentence):
         """select the most appropriate frame from the predicted frames"""
@@ -38,10 +38,10 @@ class SRLExtractor:
         frames = srl_dic['verbs']
         verbs = [d['verb'] for d in frames]
         if len(frames) == 0:
-            self.sp_fout.write('[SRL]\n')
-            self.sp_fout.write(f'sentence: {sentence}\n')
-            self.sp_fout.write(f'SRL: {srl_dic}\n')
-            self.sp_fout.write(f'\n')
+            self.log_fout.write('[SRL]\n')
+            self.log_fout.write(f'sentence: {sentence}\n')
+            self.log_fout.write(f'SRL: {srl_dic}\n')
+            self.log_fout.write(f'\n')
             return None
         elif any(f'{x} going to' in stem for x in ['was', 'were', 'is', 'are']):
             return frames[0]['verb']
@@ -79,7 +79,7 @@ class SRLExtractor:
             groups = tmp_arg_groups[frame_id]
             i, j = groups[[j - i for i, j in groups].index(max_len)]
             if i != 0 and j != len(words):
-                self.sp_fout.write('*** Warning ***\n')
+                self.log_fout.write('*** Warning ***\n')
             tags = frame['tags']
             assert len(tags) == len(words)
             if i > len(words) - j:
@@ -93,10 +93,10 @@ class SRLExtractor:
                 res = [event1, event2]
             else:
                 res = [sentence]
-        self.sp_fout.write(f'[SPLIT_TMP]\n')
-        self.sp_fout.write(f'Input: {sentence}\n')
-        self.sp_fout.write(f'Output: {res}\n')
-        self.sp_fout.write(f'\n')
+        self.log_fout.write(f'[SPLIT_TMP]\n')
+        self.log_fout.write(f'Input: {sentence}\n')
+        self.log_fout.write(f'Output: {res}\n')
+        self.log_fout.write(f'\n')
         return res
 
     def parse_story_events(self, string):
@@ -156,11 +156,11 @@ class SRLExtractor:
         max_score = max(scores)
         pos = scores.index(max_score)
         if (max_score / len(event_stem)) <= 0.5:
-            self.sp_fout.write('[COREF]\n')
-            self.sp_fout.write(f'event: {event["event"]}\n')
-            self.sp_fout.write(
+            self.log_fout.write('[COREF]\n')
+            self.log_fout.write(f'event: {event["event"]}\n')
+            self.log_fout.write(
                 f'chain: {[("***" * int(i == pos)) + e["event"] for i, e in enumerate(event_chain)]}\n')
-            self.sp_fout.write(f'\n')
+            self.log_fout.write(f'\n')
         return pos
 
     def process_file(self, input_path, output_path, is_test):
@@ -170,9 +170,9 @@ class SRLExtractor:
         n_events = 0
         with open(output_path, 'w') as fout:
             for line in tqdm(lines, total=len(lines)):
-                str_event, line = line.split('story:')
-                str_story, str_answer = line.split('answer:')
-                qe1, qe2, temp_rel = self.parse_query_events(str_event)  # TODO: add query events
+                str_event, remains = line.replace('event:', '').split('story:')
+                str_story, str_answer = remains.split('answer:')
+                qe1, qe2, temp_rel = self.parse_query_events(str_event)
                 events = self.parse_story_events(str_story)
                 pos = self.locate_event(qe2, events)
                 if not is_test:
