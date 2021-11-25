@@ -26,6 +26,7 @@ class SRLExtractor:
         self.stemmer = self.stemmer_class('english')
         self.lemmatizer = WordNetLemmatizer()
         self.bert = SentenceTransformer('all-MiniLM-L6-v2', device='cuda:0' if use_cuda else 'cpu')
+        self.stopwords = nltk.corpus.stopwords.words('english')
 
         make_dir(self.log_path)
         self.log_fout = open(self.log_path, 'w')
@@ -153,12 +154,18 @@ class SRLExtractor:
         return pos
 
     def locate_event_verb(self, event: dict, event_chain: List[dict]):
-        """Event coreference by comparing verb"""
-        v_event = self.lemmatizer.lemmatize(event['verb'], 'v')
-        v_chain = [self.lemmatizer.lemmatize(d['verb'], 'v') or '' for d in event_chain]
-        scores = [int(v_event == v) for v in v_chain]
+        """Event coreference by comparing verbs"""
+        srl = self.srl.predict_batch_json([{'sentence': event['event']}]
+                                          + [{'sentence': d['event']} for d in event_chain])
+        v_event = {self.lemmatizer.lemmatize(d['verb'], 'v') for d in srl[0]['verbs'] if
+                   d['verb'] not in self.stopwords}
+        v_chain = [{self.lemmatizer.lemmatize(d['verb'], 'v') for d in dd['verbs'] if
+                    d['verb'] not in self.stopwords} for dd in srl[1:]]
+        assert len(v_chain) == len(event_chain)
+        scores = [len(v_event & vs) for vs in v_chain]
+        max_score = max(scores)
         pos = scores.index(max(scores))
-        return pos
+        return pos, max_score
 
     def locate_event(self, event: dict, event_chain: List[dict]):
         """A simple event coreference system based on stemming and longest-common-subsequence matching"""
@@ -174,10 +181,11 @@ class SRLExtractor:
         max_score = max(scores)
         pos = scores.index(max_score)
         if (max_score / len(event_stem)) <= 0.5:  # hard cases, resolve coreferene SentenceBERT
-            pos1 = self.locate_event_bert(event, event_chain)
-            pos2 = self.locate_event_verb(event, event_chain)
-            if pos != pos1 and (pos1 == pos2 or pos != pos2):
-                pos = pos1
+            pos2, score2 = self.locate_event_verb(event, event_chain)
+            if score2 >= 1 and event['verb'] not in self.stopwords:
+                pos = pos2
+            else:
+                pos = self.locate_event_bert(event, event_chain)
             self.log_fout.write('[COREF]\n')
             self.log_fout.write(f'event: {event["event"]}\n')
             self.log_fout.write(
