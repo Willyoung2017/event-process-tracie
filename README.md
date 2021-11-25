@@ -1,6 +1,51 @@
 # Introduction
 This is our reproduction code repository for the PTNTIME mdoel on the paper "Temporal Reasoning on Implicit Events from Distant Supervision". The code is the same as their official repository on [GitHub](https://github.com/allenai/tracie).
 
+# Dependencies
+- python == 3.8
+- allennlp==2.1.0
+- allennlp-models==2.1.0
+- sentence-transformers == 2.1.0
+- nltk
+
+
+# Usage
+To extract event chains:
+```bash
+# w/ GPU:
+python code/extract_event_chains.py -o data/chains/
+
+# w/ CPU:
+python code/extract_event_chains.py -o data/chains/ --cuda 0
+```
+Output format:
+```json
+{
+  "raw": "event: Chad looked for his baseball cap starts after he got off the ride story: Chad had gone to an amusement park. He was riding on the roller coaster. Chad was wearing a baseball cap. The baseball cap fell off of Chad's head. Chad found the cap after he got off of the ride.\tanswer: positive",
+  "qe1": {
+    "verb": "looked",
+    "event": "Chad looked for his baseball cap starts"
+  },
+  "qe2": {
+    "verb": "got",
+    "event": "he got off the ride"
+  },
+  "qe1_idx": 5,  // for test intances, qe1_idx is always -1
+  "qe2_idx": 4,
+  "chain": [
+    {
+      "verb": "gone",
+      "event": "Chad had gone to an amusement park."
+    },
+    {
+      "verb": "riding",
+      "event": "He was riding on the roller coaster."
+    },
+    ...
+  ]
+}
+```
+
 # TRACIE Dataset
 We include the TRACIE dataset under `data/`. There are two splits: IID (`data/iid/`) and Uniform-Prior (`data/uniform-prior`).
 The data is in a NLI format with each line being `event: [query] story: [context] \t answer: [label] \n`.
