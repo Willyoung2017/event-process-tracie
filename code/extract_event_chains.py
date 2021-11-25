@@ -187,7 +187,10 @@ class SRLExtractor:
                 events = self.parse_story_events(str_story)
                 pos = self.locate_event(qe2, events)
                 if not is_test:
-                    if 'before' in temp_rel:
+                    assert ('positive' in str_answer) ^ ('negative' in str_answer)
+                    qe1_before_qe2 = ('before' in temp_rel and 'positive' in str_answer) \
+                                     or ('after' in temp_rel and 'negative' in str_answer)
+                    if qe1_before_qe2:
                         idx1, idx2 = pos, pos + 1
                         events.insert(pos, qe1)
                     else:
