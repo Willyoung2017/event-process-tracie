@@ -74,6 +74,7 @@ class SRLExtractor:
         tmp_arg_groups = [self.get_tmp_arg(d['tags']) for d in frames]
         if all(len(groups) == 0 for groups in tmp_arg_groups):
             res = [sentence]
+            temp_rel = 'NULL'
         else:
             tmp_arg_lens = [max([0] + [j - i for i, j in tmp_arg]) for tmp_arg in tmp_arg_groups]
             max_len = max(tmp_arg_lens)
@@ -92,11 +93,17 @@ class SRLExtractor:
             event2 = ' '.join(words[i + 1:j])
             if j - i > 1 and words[i].lower() == 'after':
                 res = [event2, event1]
+                temp_rel = 'AFTER'
             elif j - i > 1 and words[i].lower() == 'before':
                 res = [event1, event2]
+                temp_rel = 'BEFORE'
+            elif j - i > 1 and words[i].lower() == 'when':
+                res = [event2, event1]
+                temp_rel = 'WHEN'
             else:
                 res = [sentence]
-        self.log_fout.write(f'[SPLIT_TMP]\n')
+                temp_rel = 'NULL'
+        self.log_fout.write(f'[SPLIT_TMP_{temp_rel}]\n')
         self.log_fout.write(f'Input: {sentence}\n')
         self.log_fout.write(f'Output: {res}\n')
         self.log_fout.write(f'\n')
@@ -111,7 +118,7 @@ class SRLExtractor:
             sent = sent.strip()
             if sent == '':
                 continue
-            if 'before' in sent or 'after' in sent:
+            if any(x in sent for x in ['before', 'after', 'when']):
                 events += self.split_event(sent)
                 n_temp += 1
             else:
