@@ -1,5 +1,6 @@
 from allennlp.predictors.predictor import Predictor
 import allennlp_models.tagging
+from sentence_transformers import SentenceTransformer, util
 import nltk
 from nltk.stem.snowball import SnowballStemmer
 import json
@@ -24,6 +25,7 @@ class SRLExtractor:
                                        cuda_device=0 if use_cuda else -1)
         self.stemmer = self.stemmer_class('english')
         self.lemmatizer = WordNetLemmatizer()
+        self.bert = SentenceTransformer('all-MiniLM-L6-v2', device='cuda:0' if use_cuda else 'cpu')
 
         make_dir(self.log_path)
         self.log_fout = open(self.log_path, 'w')
@@ -142,6 +144,14 @@ class SRLExtractor:
                     return e1, e2, temp_rel
         raise ValueError('Invalid input')
 
+    def locate_event_bert(self, event: dict, event_chain: List[dict]):
+        """Event coreference using SentenceBERT"""
+        sentences = [event['event']] + [d['event'] for d in event_chain]
+        embeddings = self.bert.encode(sentences)
+        cos_sim = util.cos_sim(embeddings[:1], embeddings[1:])
+        pos = int(cos_sim[0].cpu().numpy().argmax())
+        return pos
+
     def locate_event(self, event: dict, event_chain: List[dict]):
         """A simple event coreference system based on stemming and longest-common-subsequence matching"""
         assert len(event_chain) >= 1
@@ -155,7 +165,8 @@ class SRLExtractor:
             scores.append(sum(block.size for block in matcher.get_matching_blocks()))
         max_score = max(scores)
         pos = scores.index(max_score)
-        if (max_score / len(event_stem)) <= 0.5:
+        if (max_score / len(event_stem)) <= 0.5:  # hard cases, resolve coreferene SentenceBERT
+            pos = self.locate_event_bert(event, event_chain)
             self.log_fout.write('[COREF]\n')
             self.log_fout.write(f'event: {event["event"]}\n')
             self.log_fout.write(
