@@ -97,9 +97,9 @@ class SRLExtractor:
             elif j - i > 1 and words[i].lower() == 'before':
                 res = [event1, event2]
                 temp_rel = 'BEFORE'
-            elif j - i > 1 and words[i].lower() == 'when':
-                res = [event2, event1]
-                temp_rel = 'WHEN'
+            # elif j - i > 1 and words[i].lower() == 'when':
+            #     res = [event2, event1]
+            #     temp_rel = 'WHEN'
             else:
                 res = [sentence]
                 temp_rel = 'NULL'
@@ -118,7 +118,7 @@ class SRLExtractor:
             sent = sent.strip()
             if sent == '':
                 continue
-            if any(x in sent for x in ['before', 'after', 'when']):
+            if any(x in sent for x in ['before', 'after']):
                 events += self.split_event(sent)
                 n_temp += 1
             else:
