@@ -87,11 +87,15 @@ class SRLExtractor:
             tags = frame['tags']
             assert len(tags) == len(words)
             if i > len(words) - j:
-                event1 = ' '.join(words[:i])
+                event1 = ' '.join(words[:i]).strip(' \t\n.,"\'')
             else:
-                event1 = ' '.join(words[j:])
-            event2 = ' '.join(words[i + 1:j])
-            if j - i > 1 and words[i].lower() == 'after':
+                event1 = ' '.join(words[j:]).strip(' \t\n.,"\'')
+            event2 = ' '.join(words[i + 1:j]).strip(' \t\n.,"\'')
+            srl = self.srl.predict_batch_json([{'sentence': event1}, {'sentence': event2}])
+            if len(srl[0]['verbs']) == 0 or len(srl[1]['verbs']) == 0:
+                res = [sentence]
+                temp_rel = 'NULL'
+            elif j - i > 1 and words[i].lower() == 'after':
                 res = [event2, event1]
                 temp_rel = 'AFTER'
             elif j - i > 1 and words[i].lower() == 'before':
@@ -103,10 +107,11 @@ class SRLExtractor:
             else:
                 res = [sentence]
                 temp_rel = 'NULL'
-        self.log_fout.write(f'[SPLIT_TMP_{temp_rel}]\n')
-        self.log_fout.write(f'Input: {sentence}\n')
-        self.log_fout.write(f'Output: {res}\n')
-        self.log_fout.write(f'\n')
+        if temp_rel != 'NULL':
+            self.log_fout.write(f'[SPLIT_TMP_{temp_rel}]\n')
+            self.log_fout.write(f'Input: {sentence}\n')
+            self.log_fout.write(f'Output: {res}\n')
+            self.log_fout.write(f'\n')
         return res
 
     def parse_story_events(self, string):
@@ -115,7 +120,7 @@ class SRLExtractor:
         sentences = nltk.tokenize.sent_tokenize(string)
         events = []
         for i, sent in enumerate(sentences):
-            sent = sent.strip()
+            sent = sent.strip(' \t\n.,"\'')
             if sent == '':
                 continue
             if any(x in sent for x in ['before', 'after']):
@@ -141,8 +146,8 @@ class SRLExtractor:
                 temp_rel = f'{comparator} {temp}'
                 if temp_rel in string:
                     e1, e2 = string.split(temp_rel)
-                    e1 = e1.strip().strip('.')
-                    e2 = e2.strip().strip('.')
+                    e1 = e1.strip(' \t\n.,"\'')
+                    e2 = e2.strip(' \t\n.,"\'')
                     srl1, srl2 = self.srl.predict_batch_json([{'sentence': e1}, {'sentence': e2}])
                     v1 = self.select_verb(srl1, e1)  # v1 == None if SRL failed
                     v2 = self.select_verb(srl2, e2)  # v2 == None if SRL failed
@@ -164,9 +169,9 @@ class SRLExtractor:
         """Event coreference by comparing verbs"""
         srl = self.srl.predict_batch_json([{'sentence': event['event']}]
                                           + [{'sentence': d['event']} for d in event_chain])
-        v_event = {self.lemmatizer.lemmatize(d['verb'], 'v') for d in srl[0]['verbs'] if
+        v_event = {self.lemmatizer.lemmatize(d['verb'].lower(), 'v') for d in srl[0]['verbs'] if
                    d['verb'] not in self.stopwords}
-        v_chain = [{self.lemmatizer.lemmatize(d['verb'], 'v') for d in dd['verbs'] if
+        v_chain = [{self.lemmatizer.lemmatize(d['verb'].lower(), 'v') for d in dd['verbs'] if
                     d['verb'] not in self.stopwords} for dd in srl[1:]]
         assert len(v_chain) == len(event_chain)
         scores = [len(v_event & vs) for vs in v_chain]
