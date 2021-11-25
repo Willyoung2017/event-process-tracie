@@ -155,7 +155,7 @@ class SRLExtractor:
     def locate_event_verb(self, event: dict, event_chain: List[dict]):
         """Event coreference by comparing verb"""
         v_event = self.lemmatizer.lemmatize(event['verb'], 'v')
-        v_chain = [self.lemmatizer.lemmatize(d['verb'], 'v') for d in event_chain]
+        v_chain = [self.lemmatizer.lemmatize(d['verb'], 'v') or '' for d in event_chain]
         scores = [int(v_event == v) for v in v_chain]
         pos = scores.index(max(scores))
         return pos
