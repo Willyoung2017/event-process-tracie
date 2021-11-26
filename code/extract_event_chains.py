@@ -72,6 +72,7 @@ class SRLExtractor:
         words = srl_dic['words']
         frames = srl_dic['verbs']
         tmp_arg_groups = [self.get_tmp_arg(d['tags']) for d in frames]
+        is_tmp = [False]
         if all(len(groups) == 0 for groups in tmp_arg_groups):
             res = [sentence]
             temp_rel = 'NULL'
@@ -82,8 +83,6 @@ class SRLExtractor:
             frame = frames[frame_id]
             groups = tmp_arg_groups[frame_id]
             i, j = groups[[j - i for i, j in groups].index(max_len)]
-            if i != 0 and j != len(words):
-                self.log_fout.write('*** Warning ***\n')
             tags = frame['tags']
             assert len(tags) == len(words)
             if i > len(words) - j:
@@ -98,46 +97,60 @@ class SRLExtractor:
             elif j - i > 1 and words[i].lower() == 'after':
                 res = [event2, event1]
                 temp_rel = 'AFTER'
+                is_tmp = [True, False]
             elif j - i > 1 and words[i].lower() == 'before':
                 res = [event1, event2]
                 temp_rel = 'BEFORE'
+                is_tmp = [False, True]
             # elif j - i > 1 and words[i].lower() == 'when':
             #     res = [event2, event1]
             #     temp_rel = 'WHEN'
             else:
                 res = [sentence]
                 temp_rel = 'NULL'
-        if temp_rel != 'NULL':
-            self.log_fout.write(f'[SPLIT_TMP_{temp_rel}]\n')
-            self.log_fout.write(f'Input: {sentence}\n')
-            self.log_fout.write(f'Output: {res}\n')
-            self.log_fout.write(f'\n')
-        return res
+
+            if temp_rel != 'NULL':
+                if i != 0 and j != len(words):
+                    self.log_fout.write('*** Warning ***\n')
+                self.log_fout.write(f'[SPLIT_TMP_{temp_rel}]\n')
+                self.log_fout.write(f'Input: {sentence}\n')
+                self.log_fout.write(f'Output: {res}\n')
+                self.log_fout.write(f'\n')
+        assert len(res) == len(is_tmp)
+        return res, is_tmp
 
     def parse_story_events(self, string):
         string = string.strip()
         n_temp = 0
         sentences = nltk.tokenize.sent_tokenize(string)
         events = []
+        is_tmp = []
         for i, sent in enumerate(sentences):
             sent = sent.strip(' \t\n.,"\'')
             if sent == '':
                 continue
             if any(x in sent for x in ['before', 'after']):
-                events += self.split_event(sent)
+                split, split_is_tmp = self.split_event(sent)
+                events += split
+                is_tmp += split_is_tmp
                 n_temp += 1
             else:
                 events.append(sent)
+                is_tmp.append(False)
+
         srl_results = self.srl.predict_batch_json([{'sentence': e} for e in events])
         res = []
-        assert len(srl_results) == len(events)
-        for srl, e in zip(srl_results, events):
+        tmp_indexes = []
+        assert len(srl_results) == len(events) == len(is_tmp)
+        for srl, e, tmp in zip(srl_results, events, is_tmp):
             verb = self.select_verb(srl, e)
             if verb is None:
                 continue
+            if tmp:
+                tmp_indexes.append(len(res))
             res.append({'verb': verb, 'event': e})
         assert len(res) >= 1
-        return res
+        return res, tmp_indexes
 
     def parse_query_events(self, string):
         string = string.strip()
@@ -215,8 +228,18 @@ class SRLExtractor:
                 str_event, remains = line.replace('event:', '').split('story:')
                 str_story, str_answer = remains.split('answer:')
                 qe1, qe2, temp_rel = self.parse_query_events(str_event)
-                events = self.parse_story_events(str_story)
+                events, tmp_indexes = self.parse_story_events(str_story)
+
+                # find the location of qe2 (explicit event)
                 pos = self.locate_event(qe2, events)
+
+                # delete temporal arguments that are not query events
+                tmp_indexes = [i for i in tmp_indexes if i != pos]
+                events = [e for i, e in enumerate(events) if i not in tmp_indexes]
+                pos -= sum(1 for i in tmp_indexes if i < pos)
+                assert len(events) >= 1
+
+                # insert qe1 (implicit event)
                 if not is_test:
                     assert ('positive' in str_answer) ^ ('negative' in str_answer)
                     qe1_before_qe2 = ('before' in temp_rel and 'positive' in str_answer) \
@@ -265,6 +288,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-i', '--input_dir', default='data/iid/')
     parser.add_argument('-o', '--output_dir', default='data/chains/')
+    parser.add_argument('-v', '--version', default='v1')
     parser.add_argument('--cuda', default=True, type=bool_flag, nargs='?', const=True)
     parser.add_argument('--debug', action='store_true')
     args = parser.parse_args()
@@ -281,7 +305,7 @@ def main():
                 assert ('train' in f) ^ ('test' in f)
                 is_test = 'test' in f
                 input_path = os.path.join(args.input_dir, f)
-                output_path = os.path.join(args.output_dir, f.replace('.txt', '.jsonl'))
+                output_path = os.path.join(args.output_dir, f.replace('.txt', f'_{args.version}.jsonl'))
                 make_dir(output_path)
                 extractor.process_file(input_path, output_path, is_test=is_test)
     finally:
