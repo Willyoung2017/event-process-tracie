@@ -1,6 +1,6 @@
 def evaluate_tracie_style():
     glines = [x.strip() for x in open("../../../data/uniform-prior/tracie_test.txt").readlines()]
-    plines = [x.strip() for x in open("experiment_result_t5_iid/eval_results_lm.txt").readlines()]
+    plines = [x.strip() for x in open("experiment_result2/predictions.txt").readlines()]
     assert len(glines) == len(plines)
     total = 0
     correct = 0
