@@ -75,7 +75,8 @@ def check_chain_fulfill_constraints(events, constraints):
     return all(fulfill_constraint(e1, e2) for e1, e2 in constraints)
 
 
-def predict_on_unseen_events(data, predictor, args, file=sys.stdout):
+def predict_on_unseen_events(data, predictor, args, file="output.txt"):
+    file = open(file, "w")
     question_event_in_context_idx = data['qe2_idx']
     question_event_in_context = data['chain'][question_event_in_context_idx]
     label = data["raw"].split("answer: ")[-1]
