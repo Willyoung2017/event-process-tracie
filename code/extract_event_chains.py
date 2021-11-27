@@ -11,16 +11,13 @@ from difflib import SequenceMatcher
 from tqdm import tqdm
 from typing import Dict, List
 
-TMP_PATH = 'data/chains/tmp.txt'
-
 
 class SRLExtractor:
     srl_model_url = "https://storage.googleapis.com/allennlp-public-models/" \
                     "structured-prediction-srl-bert.2020.12.15.tar.gz"
     stemmer_class = nltk.stem.snowball.SnowballStemmer
-    log_path = 'data/chains/extractor.log'
 
-    def __init__(self, use_cuda=True):
+    def __init__(self, use_cuda=True, log_path='data/chains/extractor.log'):
         self.srl = Predictor.from_path(self.srl_model_url,
                                        cuda_device=0 if use_cuda else -1)
         self.stemmer = self.stemmer_class('english')
@@ -28,8 +25,8 @@ class SRLExtractor:
         self.bert = SentenceTransformer('all-MiniLM-L6-v2', device='cuda:0' if use_cuda else 'cpu')
         self.stopwords = nltk.corpus.stopwords.words('english')
 
-        make_dir(self.log_path)
-        self.log_fout = open(self.log_path, 'w')
+        make_dir(log_path)
+        self.log_fout = open(log_path, 'w')
 
     def free(self):
         self.log_fout.close()
@@ -148,9 +145,24 @@ class SRLExtractor:
                 continue
             if tmp:
                 tmp_indexes.append(len(res))
-            res.append({'verb': verb, 'event': e})
+            res.append({'V_toks': [verb], 'event': e})
         assert len(res) >= 1
         return res, tmp_indexes
+
+    def get_any_verb(self, tokens):
+        assert len(tokens) >= 1
+        tagged = nltk.pos_tag(tokens)
+        verb = tokens[0]
+        for w, tag in tagged:
+            if tag.startswith('VB'):
+                verb = w
+                break
+
+        self.log_fout.write('[SRL-HARD]\n')
+        self.log_fout.write(f'tokens: {tokens}\n')
+        self.log_fout.write(f'verb: {verb}\n')
+        self.log_fout.write(f'\n')
+        return verb
 
     def parse_query_events(self, string):
         string = string.strip()
@@ -165,8 +177,8 @@ class SRLExtractor:
                     v1 = self.select_verb(srl1, e1)  # v1 == None if SRL failed
                     v2 = self.select_verb(srl2, e2)  # v2 == None if SRL failed
                     e1 = e1 + ' ' + comparator  # event1 -> event1 starts/ends
-                    e1 = {'verb': v1, 'event': e1}
-                    e2 = {'verb': v2, 'event': e2}
+                    e1 = {'V_toks': [v1], 'event': e1}
+                    e2 = {'V_toks': [v2], 'event': e2}
                     return e1, e2, temp_rel
         raise ValueError('Invalid input')
 
@@ -207,7 +219,7 @@ class SRLExtractor:
         pos = scores.index(max_score)
         if (max_score / len(event_stem)) <= 0.5:  # hard cases, resolve coreferene SentenceBERT
             pos2, score2 = self.locate_event_verb(event, event_chain)
-            if score2 >= 1 and event['verb'] not in self.stopwords:
+            if score2 >= 1 and event['V_toks'][0] not in self.stopwords:
                 pos = pos2
             else:
                 pos = self.locate_event_bert(event, event_chain)
@@ -288,16 +300,14 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-i', '--input_dir', default='data/iid/')
     parser.add_argument('-o', '--output_dir', default='data/chains/')
-    parser.add_argument('-v', '--version', default='v1')
+    parser.add_argument('-v', '--version', default='v2')
+    parser.add_argument('--log_path', default='data/chains/extractor_{version}.log')
     parser.add_argument('--cuda', default=True, type=bool_flag, nargs='?', const=True)
     parser.add_argument('--debug', action='store_true')
     args = parser.parse_args()
 
-    make_dir(TMP_PATH)
-    with open(TMP_PATH, 'w') as fout:
-        pass
-
-    extractor = SRLExtractor(use_cuda=args.cuda)
+    extractor = SRLExtractor(use_cuda=args.cuda,
+                             log_path=args.log_path.format(version=args.version))
 
     try:
         for f in os.listdir(args.input_dir):
