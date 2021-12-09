@@ -72,6 +72,15 @@ To run the PtnTime pre-trained model, use `sh run_ptntime_on_uniform_prior.sh`
 Both scripts will create a result file `experiment_result/eval_results_lm.txt`. To evaluate, run `python evaluator.py`.
 We provide the predictions from our experiments with under `experiment_result`. We also provide the results of our error analysis under  `error.txt`.
 
+### Output
+The output file is in `\output`, the content of each file is like:
+```
+eval_results_lm.txt                  baseline(PTNTIME) prediction
+output-predictions-finetune.txt      fine-tune model output
+output-predictions-zero-shot.txt     zero-shot model output
+predictions-finetune.txt             fine-tune model predictions
+predictions-zero-shot.txt            zero-shot model predictions
+```
 
 # Citation
 See the following paper: 
