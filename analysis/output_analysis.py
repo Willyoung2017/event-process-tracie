@@ -6,6 +6,7 @@ Created on Sun Nov 28 21:28:02 2021
 """
 
 file = r"C:\Users\han1h\Desktop\output-predictions-zero-shot.txt"
+file = r"C:\Users\han1h\Desktop\output-predictions-finetune.txt"
 
 with open(file, 'r') as f:
     output = f.read()
@@ -27,6 +28,21 @@ wr = []
 for a in ans:
     if a[-2] == 'F':
         wr.append(a)
+        
+sb = 0
+sa = 0
+eb = 0
+ea = 0
+for w in wr:
+    a = w.split("\n")[3][11:19]
+    if a == 'starts b':
+        sb += 1
+    if a == 'starts a':
+        sa += 1
+    if a == 'ends bef':
+        eb += 1
+    if a == 'ends aft':
+        ea += 1
         
 
         
