@@ -69,10 +69,19 @@ To run the T5-large baseline, use `sh run_t5_large_baseline_on_uniform_prior.sh`
 
 To run the PtnTime pre-trained model, use `sh run_ptntime_on_uniform_prior.sh`
 
-Both scripts will create a result file `experiment_result/eval_results_lm.txt`. To evaluate, run `python evaluator.py`.
-We provide the predictions from our experiments with under `experiment_result`. We also provide the results of our error analysis under  `error.txt`.
+## Our Method
+With the task reformulation and the extracted temporal chains, our method directly uses [TemporlBART](https://github.com/jjasonn0717/TemporalBART) to run. There are two settings: zero-shot and fine-tuning
 
-### Output
+### Pre-trained Model
+Download the pretrained TemporalBART model from [Google Drive](https://drive.google.com/file/d/1SdSrGhB4KMWIMzbD42GobKQmKPOIuRKL/view?usp=sharing)
+and put it under `ckpts/temporal-bart/` 
+
+### Run experiments
+To run the zero-shot version, use `sh run.sh` under `code/`
+
+To run the fine-tuning version, use `sh run_finetune.sh` under `code/`
+
+# Output & Evaluations
 The output file is in `\output`, the content of each file is like:
 ```
 eval_results_lm.txt                  baseline(PTNTIME) prediction
@@ -81,6 +90,8 @@ output-predictions-zero-shot.txt     zero-shot model output
 predictions-finetune.txt             fine-tune model predictions
 predictions-zero-shot.txt            zero-shot model predictions
 ```
+To evaluate, run `python evaluator.py`.
+We provide the predictions from our experiments with under `experiment_result`. We also provide the results of our error analysis under  `error.txt`.
 
 # Citation
 See the following paper: 
