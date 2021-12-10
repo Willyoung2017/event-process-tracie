@@ -1,5 +1,5 @@
 # Introduction
-This is our reproduction code repository for the PTNTIME mdoel on the paper "Temporal Reasoning on Implicit Events from Distant Supervision". The code is the same as their official repository on [GitHub](https://github.com/allenai/tracie).
+This is our repository for our paper "Event Process Understanding for Temporal Relation Prediction". And thanks to the TRACIE repository on [GitHub](https://github.com/allenai/tracie) and TemporalBART on [GitHub](https://github.com/jjasonn0717/TemporalBART).
 
 # Dependencies
 - python == 3.8
@@ -79,7 +79,7 @@ and put it under `ckpts/temporal-bart/`
 ### Run experiments
 To run the zero-shot version, use `sh run.sh` under `code/`
 
-To run the fine-tuning version, use `sh run_finetune.sh` under `code/`
+To run the fine-tuning version, use `allennlp train ./configs/temporal_bart_config.json -r /PATH/TO/MODEL_CHKPT/ --include-package denoising_event_lm`
 
 # Output & Evaluations
 The output file is in `\output`, the content of each file is like:
@@ -92,14 +92,3 @@ predictions-zero-shot.txt            zero-shot model predictions
 ```
 To evaluate, run `python evaluator.py`.
 We provide the predictions from our experiments with under `experiment_result`. We also provide the results of our error analysis under  `error.txt`.
-
-# Citation
-See the following paper: 
-```
-@inproceedings{ZRNKSR21,
-    author = {Ben Zhou and Kyle Richardson and Qiang Ning and Tushar Khot and Ashish Sabharwal and Dan Roth},
-    title = {Temporal Reasoning on Implicit Events from Distant Supervision},
-    booktitle = {NAACL},
-    year = {2021},
-}
-```
